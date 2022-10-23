@@ -19,10 +19,14 @@ int main()
                 window.close();
         }
 
-        window.clear();
-        window.draw(shape);
+        engine.clearScreen(window,Color::Cyan);
+
+        //window.clear();
+        //window.draw(shape);
         window.display();
     }
+
+    
 
     return 0;
 }
