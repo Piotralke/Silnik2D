@@ -1,6 +1,8 @@
 #pragma once
 #include "Engine.h"
 
+Engine* Engine::instance = nullptr;
+
 Engine::Engine(RenderWindow* window)
 {
     this->window = window;
@@ -61,6 +63,11 @@ void chuj()
     Engine* engine = Engine::getInstance();
     engine->enableFullscreen(true);
 }
+void chuj2()
+{
+    Engine* engine = Engine::getInstance();
+    engine->enableFullscreen(false);
+}
 
 void Engine::handleAction(Event* event)
 {
@@ -74,6 +81,7 @@ void Engine::handleAction(Event* event)
 void Engine::gameLoop()
 {
     eventRegister(sf::Keyboard::F, &chuj, false);
+    eventRegister(sf::Keyboard::W, &chuj2, false);
     while (window->isOpen())
     {
         
