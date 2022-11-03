@@ -3,12 +3,40 @@
 
 Engine::Engine(RenderWindow* window)
 {
-	this->window = window;
+    this->window = window;
+    this->instance = this;
 }
-
-void Engine::changeGraphicMode(int width,int height,String title, Uint32 style )
+Engine* Engine::getInstance(RenderWindow* window)
 {
-	window->create(VideoMode(width, height), title, style);
+    if (instance == NULL)
+    {
+        instance = new Engine(window);
+    }
+    return instance;
+}
+Engine* Engine::getInstance()
+{
+    return instance;
+}
+void Engine::changeResolution(int width,int height)
+{
+    Vector2u vector = Vector2u(width, height);
+    this->window->setSize(vector);
+}
+void Engine::enableFullscreen(bool fullscreen)
+{
+    if(fullscreen)
+        this->window->create(sf::VideoMode::getFullscreenModes()[0],this->Title,sf::Style::Fullscreen);
+    else
+        this->window->create(sf::VideoMode::getFullscreenModes()[0], this->Title, sf::Style::Default);
+}
+void Engine::setFPSLimit(unsigned int value)
+{
+    this->window->setFramerateLimit(value); 
+}
+void Engine::enableVSync(bool boolean)
+{
+    this->window->setVerticalSyncEnabled(boolean);
 }
 void Engine::closeGame() 
 {
@@ -30,7 +58,8 @@ void Engine::eventRegister(int key, void (*function)(),bool hold)
 
 void chuj()
 {
-    cout << "CHUJ CI W DUPE" << endl;
+    Engine* engine = Engine::getInstance();
+    engine->enableFullscreen(true);
 }
 
 void Engine::handleAction(Event* event)
@@ -44,8 +73,7 @@ void Engine::handleAction(Event* event)
 
 void Engine::gameLoop()
 {
-
-    eventRegister(Keyboard::K, &chuj, true);
+    eventRegister(sf::Keyboard::F, &chuj, false);
     while (window->isOpen())
     {
         

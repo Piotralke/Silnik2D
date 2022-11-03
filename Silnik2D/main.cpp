@@ -5,9 +5,10 @@ int main()
 {
     String title = "Silnik2D";
     RenderWindow window(VideoMode(100,100),"DUPA");
-    Engine engine = Engine(&window);
-    engine.changeGraphicMode(200, 200, title, Style::Default);
-    engine.gameLoop();
+    Engine* engine = Engine::getInstance(&window);
+    
+    engine->changeResolution(1000, 1000);
+    engine->gameLoop();
     
     return 0;
 }
