@@ -2,6 +2,7 @@
 #pragma warning(disable : 4996)
 #include "Engine.h"
 
+
 Engine* Engine::instance = nullptr;
 
 Engine::Engine(RenderWindow* window)
@@ -12,7 +13,6 @@ Engine::Engine(RenderWindow* window)
     this->height = window->getSize().y;
     this->errorDesc.insert(make_pair(NO_FILE_ER, "Nie znaleziono pliku!"));
     this->errorDesc.insert(make_pair(UNKNOWN_ER, "Nieznany blad"));
-
 }
 Engine* Engine::getInstance(RenderWindow* window)
 {
@@ -116,6 +116,8 @@ void Engine::reportError(Errors error, string fileName, int line)
 }
 void Engine::gameLoop()
 {
+    Point2D point(50, 50);
+    PrimitiveRenderer pr(window);
     eventRegister(sf::Keyboard::F, &chuj, false);
     eventRegister(sf::Keyboard::W, &chuj2, false);
    // reportError(UNKNOWN_ER, __FILE__, __LINE__);
@@ -134,7 +136,7 @@ void Engine::gameLoop()
             }
             
         }
-        
+        point.draw(&pr,sf::Color::Magenta);
        // clearScreen(Color::Red);
 
         //window.clear();

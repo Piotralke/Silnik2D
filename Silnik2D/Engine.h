@@ -1,4 +1,5 @@
 #pragma once
+#include "PrimitiveRenderer.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include<map>
