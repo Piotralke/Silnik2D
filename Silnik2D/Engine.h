@@ -3,12 +3,21 @@
 #include <iostream>
 #include<map>
 #include<set>
+#include<fstream>
+#include<time.h>
+#include<ctime>
 #ifndef engine_h
 #define engine_h
 
 using namespace sf;
 using namespace std;
 
+
+enum Errors
+{
+	NO_FILE_ER,
+	UNKNOWN_ER
+};
 class Engine
 {
 protected:
@@ -26,12 +35,23 @@ public:
 	void enableVSync(bool boolean);
 	static Engine* getInstance(RenderWindow* window);
 	static Engine* getInstance();
-private:
+	void updateTimer();
+	void enableMouse(bool value);
+	void enableKeyboard(bool value);
+	void reportError(Errors error, string fileName, int line);
 	
+private:
 	String Title = "Silnik2D";
 	RenderWindow* window;
+	Time deltaTime;
+	Clock clock;
 	Event event;
-	map<int , void(*)()> keyToFuncMap;
+	map<int, void(*)()> keyToFuncMap;
+	map<Errors, std::string> errorDesc;
 	set<int> holdableKeys;
+	bool mouseOn = true;
+	bool keyboardOn = true;
+	int width;
+	int height;
 };
 #endif

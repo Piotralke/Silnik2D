@@ -1,0 +1,7 @@
+ERROR:1 | Description: Nieznany blad | At: [08-11-2022-20:46:07] | In file: C:\Users\piotr\source\repos\Silnik2D\Silnik2D\Engine.cpp | At line:121
+ERROR:1 | Description: Nieznany blad | At: [08-11-2022-20:46:24] | In file: C:\Users\piotr\source\repos\Silnik2D\Silnik2D\Engine.cpp | At line:121
+ERROR:1 | Description: Nieznany blad | At: [08-11-2022-20:46:24] | In file: C:\Users\piotr\source\repos\Silnik2D\Silnik2D\Engine.cpp | At line:122
+ERROR:1 | Description: Nieznany blad | At: [08-11-2022-20:46:24] | In file: C:\Users\piotr\source\repos\Silnik2D\Silnik2D\Engine.cpp | At line:123
+ERROR:1 | Description: Nieznany blad | At: [08-11-2022-20:46:24] | In file: C:\Users\piotr\source\repos\Silnik2D\Silnik2D\Engine.cpp | At line:124
+ERROR:1 | Description: Nieznany blad | At: [08-11-2022-20:46:24] | In file: C:\Users\piotr\source\repos\Silnik2D\Silnik2D\Engine.cpp | At line:125
+ERROR:1 | Description: Nieznany blad | At: [08-11-2022-20:46:24] | In file: C:\Users\piotr\source\repos\Silnik2D\Silnik2D\Engine.cpp | At line:126
