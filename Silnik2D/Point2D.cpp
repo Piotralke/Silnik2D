@@ -34,7 +34,3 @@ Point2D Point2D::getPoint()
 {
 	return Point2D(this->x, this->y);
 }
-void Point2D::draw(PrimitiveRenderer* pr, Color color)
-{
-	pr->drawPoint(this, color);
-}

@@ -42,7 +42,6 @@ void Engine::enableFullscreen(bool fullscreen)
         this->window->create(sf::VideoMode::getFullscreenModes()[0], this->Title, sf::Style::Default);
         changeResolution(this->width, this->height);
     }
-        
 }
 void Engine::setFPSLimit(unsigned int value)
 {
@@ -116,7 +115,11 @@ void Engine::reportError(Errors error, string fileName, int line)
 }
 void Engine::gameLoop()
 {
-    Point2D point(50, 50);
+    Point2D point(502, 500);
+    Point2D point2(500, 735);
+    Point2D point3(700, 700);
+    Point2D point4(720, 500);
+
     PrimitiveRenderer pr(window);
     eventRegister(sf::Keyboard::F, &chuj, false);
     eventRegister(sf::Keyboard::W, &chuj2, false);
@@ -136,10 +139,20 @@ void Engine::gameLoop()
             }
             
         }
-        point.draw(&pr,sf::Color::Magenta);
+        window->clear();
+        //pr.drawRectangle(&point, 100, 100, Color::Red);
+        //pr.drawRectangle(&point2, 200, 200, Color::Green);
+        //pr.drawLine(&point, &point2, Color::Blue);
        // clearScreen(Color::Red);
+        std::vector<Point2D> vector;
+        vector.push_back(point);
+        vector.push_back(point2);
+        vector.push_back(point3);
+        vector.push_back(point4);
+        pr.drawConvexShape(vector,sf::Color::Green);
+        pr.drawCircle(&point, 120.5, Color::Magenta);
 
-        //window.clear();
+        
         //window.draw(shape);
         window->display();
     }
