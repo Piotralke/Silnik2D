@@ -12,6 +12,7 @@ private:
 	float y;
 public:
 	Point2D(float x, float y);
+	Point2D();
 	Point2D(Vector2f point);
 	float getX();
 	float getY();

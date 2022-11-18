@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include<vector>
+#include <vector>
 #include "Point2D.h"
 
 #ifndef primitiverenderer_h
@@ -20,6 +20,7 @@ public:
 	void drawLine(Point2D* point1, Point2D* point2, Color color);
 	void drawConvexShape(std::vector<Point2D> vec, Color color);
 	void drawCircle(Point2D* point, float radius, Color color);
+	void drawBrokenLine(std::vector<Point2D> vec, Color color);
 };
 
 #endif

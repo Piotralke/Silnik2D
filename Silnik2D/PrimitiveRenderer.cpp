@@ -1,5 +1,5 @@
 #include "PrimitiveRenderer.h"
-#include "Point2D.h"
+
 PrimitiveRenderer::PrimitiveRenderer(RenderWindow* window)
 {
 	this->window = window;
@@ -60,4 +60,10 @@ void PrimitiveRenderer::drawCircle(Point2D* point, float radius, Color color)
 	shape.setFillColor(Color(0, 0, 0, 0));
 	shape.setOutlineColor(color);
 	window->draw(shape);
+}
+void PrimitiveRenderer::drawBrokenLine(std::vector<Point2D> vec, Color color)
+{
+	for (int i = 1; i < vec.size(); i++)
+		PrimitiveRenderer::drawLine(&vec[i-1], &vec[i], color);
+	PrimitiveRenderer::drawLine(&vec[vec.size()-1], &vec[0], color);
 }

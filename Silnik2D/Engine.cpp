@@ -119,6 +119,7 @@ void Engine::gameLoop()
     Point2D point2(500, 735);
     Point2D point3(700, 700);
     Point2D point4(720, 500);
+    LineSegment test(point3, point4);
 
     PrimitiveRenderer pr(window);
     eventRegister(sf::Keyboard::F, &chuj, false);
@@ -149,10 +150,11 @@ void Engine::gameLoop()
         vector.push_back(point2);
         vector.push_back(point3);
         vector.push_back(point4);
-        pr.drawConvexShape(vector,sf::Color::Green);
-        pr.drawCircle(&point, 120.5, Color::Magenta);
+        //pr.drawConvexShape(vector,sf::Color::Green);
+        //pr.drawCircle(&point, 120.5, Color::Magenta);
+        //test.draw(1, &pr, Color::White);
+        pr.drawBrokenLine(vector, Color::White);
 
-        
         //window.draw(shape);
         window->display();
     }

@@ -10,6 +10,11 @@ Point2D::Point2D(Vector2f point)
 	this->x = point.x;
 	this->y = point.y;
 }
+Point2D::Point2D()
+{
+	this->x = 0;
+	this->y = 0;
+}
 float Point2D::getX()
 {
 	return this->x;
