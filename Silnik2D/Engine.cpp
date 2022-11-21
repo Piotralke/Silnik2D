@@ -119,12 +119,15 @@ void Engine::gameLoop()
     Point2D point2(500, 735);
     Point2D point3(700, 700);
     Point2D point4(720, 500);
+    Point2D pointFill(480, 470);
+    Point2D pointFillBoundry(530, 540);
     LineSegment test(point3, point4);
 
     PrimitiveRenderer pr(window);
     eventRegister(sf::Keyboard::F, &chuj, false);
     eventRegister(sf::Keyboard::W, &chuj2, false);
    // reportError(UNKNOWN_ER, __FILE__, __LINE__);
+
     while (window->isOpen())
     {
         updateTimer();
@@ -158,6 +161,9 @@ void Engine::gameLoop()
 
         pr.drawBrokenLine(vector, Color::White);
         pr.drawLineByAlgorithm(&point, &point3, Color::Green);
+        //pr.floodFill(&pointFill, Color::Magenta, Color::Black);
+        pr.boundryFill(&pointFillBoundry, Color::Magenta, Color::White);
+        
         //window.draw(shape);
         window->display();
     }

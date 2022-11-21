@@ -1,3 +1,4 @@
+#pragma warning(disable : 4996)
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <vector>
@@ -26,6 +27,8 @@ public:
 	void drawCircleByAlgorithm(Point2D* point, float radius, Color color);
 	void drawElipseByAlgorithm(Point2D* point, float radiusX, float radiusY, Color color);
 	void drawBrokenLine(std::vector<Point2D> vec, Color color);
+	void floodFill(Point2D* point, Color color, Color backgroundColor);
+	void boundryFill(Point2D* point, Color fillColor, Color boundryColor);
 };
 
 #endif

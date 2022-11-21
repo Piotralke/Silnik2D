@@ -1,4 +1,5 @@
 #include "PrimitiveRenderer.h"
+#include <stack>
 
 PrimitiveRenderer::PrimitiveRenderer(RenderWindow* window)
 {
@@ -137,4 +138,79 @@ void PrimitiveRenderer::drawBrokenLine(std::vector<Point2D> vec, Color color)
 	for (int i = 1; i < vec.size(); i++)
 		PrimitiveRenderer::drawLine(&vec[i-1], &vec[i], color);
 	PrimitiveRenderer::drawLine(&vec[vec.size()-1], &vec[0], color);
+}
+void PrimitiveRenderer::floodFill(Point2D* point, Color fillColor, Color backgroundColor)
+{
+	Texture texture;
+	texture.create(window->getSize().x, window->getSize().y);
+	texture.update(*window);
+	Image image = texture.copyToImage();
+	auto color = image.getPixel(point->getX(), point->getY());
+	Point2D p = Point2D(point->getVector());
+	std::stack<Point2D> stack;
+	stack.push(p);
+	while (!stack.empty())
+	{
+
+		p.setX(stack.top().getX());
+		p.setY(stack.top().getY());
+		stack.pop();
+		if (image.getPixel(p.getX(), p.getY()) == fillColor)
+			continue;
+		if (image.getPixel(p.getX(), p.getY()) != backgroundColor)
+			continue;
+		drawPoint(&p, fillColor);
+		image.setPixel(p.getX(), p.getY(), fillColor);
+
+		if (p.getY() - 1 > 0)
+			stack.push(Point2D(p.getX(), p.getY() - 1));
+
+		if (p.getY() + 1 < window->getSize().y)
+			stack.push(Point2D(p.getX(), p.getY() + 1));
+
+		if (p.getX() - 1 > 0)
+			stack.push(Point2D(p.getX() - 1, p.getY()));
+
+		if (p.getX() + 1 < window->getSize().x)
+			stack.push(Point2D(p.getX() + 1, p.getY()));
+
+	}
+}
+void PrimitiveRenderer::boundryFill(Point2D* point, Color fillColor, Color boundryColor)
+{
+	
+
+	Texture texture;
+	texture.create(window->getSize().x, window->getSize().y);
+	texture.update(*window);
+	Image image = texture.copyToImage();
+	Point2D p = Point2D(point->getVector());
+	std::stack<Point2D> stack;
+	stack.push(p);
+	while (!stack.empty())
+	{
+
+		p.setX(stack.top().getX());
+		p.setY(stack.top().getY());
+		stack.pop();
+		if (image.getPixel(p.getX(), p.getY()) == fillColor)
+			continue;
+		if (image.getPixel(p.getX(), p.getY()) == boundryColor)
+			continue;
+		drawPoint(&p, fillColor);
+		image.setPixel(p.getX(), p.getY(), fillColor);
+
+		if (p.getY() - 1 > 0)
+			stack.push(Point2D(p.getX(), p.getY() - 1));
+
+		if (p.getY() + 1 < window->getSize().y)
+			stack.push(Point2D(p.getX(), p.getY() + 1));
+
+		if (p.getX() - 1 > 0)
+			stack.push(Point2D(p.getX() - 1, p.getY()));
+
+		if (p.getX() + 1 < window->getSize().x)
+			stack.push(Point2D(p.getX() + 1, p.getY()));
+
+	}
 }
