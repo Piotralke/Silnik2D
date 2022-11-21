@@ -153,8 +153,11 @@ void Engine::gameLoop()
         //pr.drawConvexShape(vector,sf::Color::Green);
         //pr.drawCircle(&point, 120.5, Color::Magenta);
         //test.draw(1, &pr, Color::White);
-        pr.drawBrokenLine(vector, Color::White);
+        pr.drawCircleByAlgorithm(&point, 70 ,Color::Red);
+        pr.drawElipseByAlgorithm(&point, 100,50 ,Color::Cyan);
 
+        pr.drawBrokenLine(vector, Color::White);
+        pr.drawLineByAlgorithm(&point, &point3, Color::Green);
         //window.draw(shape);
         window->display();
     }
