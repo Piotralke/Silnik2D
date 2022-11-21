@@ -144,7 +144,7 @@ void Engine::gameLoop()
             
         }
         window->clear();
-        //pr.drawRectangle(&point, 100, 100, Color::Red);
+        //pr.drawFilledRectangle(&point, 100, 100, Color::Red);
         //pr.drawRectangle(&point2, 200, 200, Color::Green);
         //pr.drawLine(&point, &point2, Color::Blue);
        // clearScreen(Color::Red);
@@ -162,7 +162,7 @@ void Engine::gameLoop()
         pr.drawBrokenLine(vector, Color::White);
         pr.drawLineByAlgorithm(&point, &point3, Color::Green);
         //pr.floodFill(&pointFill, Color::Magenta, Color::Black);
-        pr.boundryFill(&pointFillBoundry, Color::Magenta, Color::White);
+       // pr.boundryFill(&pointFillBoundry, Color::Magenta, Color::White);
         
         //window.draw(shape);
         window->display();

@@ -20,6 +20,16 @@ void PrimitiveRenderer::drawRectangle(Point2D* point, int width, int height, Col
 	shape.setOutlineColor(color);
 	window->draw(shape);
 }
+void PrimitiveRenderer::drawFilledRectangle(Point2D* point, int width, int height, Color color)
+{
+	RectangleShape shape;
+	shape.setPosition(point->getVector());
+	shape.setSize(Vector2f(width, height));
+	shape.setOutlineThickness(1);
+	shape.setFillColor(color);
+	shape.setOutlineColor(color);
+	window->draw(shape);
+}
 void PrimitiveRenderer::drawSquare(Point2D* point, int x, Color color)
 {
 	RectangleShape shape;
@@ -27,6 +37,16 @@ void PrimitiveRenderer::drawSquare(Point2D* point, int x, Color color)
 	shape.setSize(Vector2f(x, x));
 	shape.setOutlineThickness(1);
 	shape.setFillColor(Color(0, 0, 0, 0));
+	shape.setOutlineColor(color);
+	window->draw(shape);
+}
+void PrimitiveRenderer::drawFilledSquare(Point2D* point, int x, Color color)
+{
+	RectangleShape shape;
+	shape.setPosition(point->getVector());
+	shape.setSize(Vector2f(x, x));
+	shape.setOutlineThickness(1);
+	shape.setFillColor(color);
 	shape.setOutlineColor(color);
 	window->draw(shape);
 }
@@ -133,6 +153,16 @@ void PrimitiveRenderer::drawCircle(Point2D* point, float radius, Color color)
 	shape.setOutlineColor(color);
 	window->draw(shape);
 }
+void PrimitiveRenderer::drawFilledCircle(Point2D* point, float radius, Color color)
+{
+	sf::CircleShape shape(radius);
+
+	shape.setPosition(point->getX() - radius, point->getY() - radius);
+	shape.setOutlineThickness(1);
+	shape.setFillColor(color);
+	shape.setOutlineColor(color);
+	window->draw(shape);
+}
 void PrimitiveRenderer::drawBrokenLine(std::vector<Point2D> vec, Color color)
 {
 	for (int i = 1; i < vec.size(); i++)
@@ -178,8 +208,6 @@ void PrimitiveRenderer::floodFill(Point2D* point, Color fillColor, Color backgro
 }
 void PrimitiveRenderer::boundryFill(Point2D* point, Color fillColor, Color boundryColor)
 {
-	
-
 	Texture texture;
 	texture.create(window->getSize().x, window->getSize().y);
 	texture.update(*window);

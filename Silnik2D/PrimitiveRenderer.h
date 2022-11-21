@@ -19,11 +19,14 @@ public:
 	PrimitiveRenderer(RenderWindow* window);
 	void drawPoint(Point2D* point, Color color);
 	void drawRectangle(Point2D* point,int width, int height, Color color);
+	void drawFilledRectangle(Point2D* point,int width, int height, Color color);
 	void drawSquare(Point2D* point,int x, Color color);
+	void drawFilledSquare(Point2D* point,int x, Color color);
 	void drawLine(Point2D* point1, Point2D* point2, Color color);
 	void drawLineByAlgorithm(Point2D* point1, Point2D* point2, Color color);
 	void drawConvexShape(std::vector<Point2D> vec, Color color);
 	void drawCircle(Point2D* point, float radius, Color color);
+	void drawFilledCircle(Point2D* point, float radius, Color color);
 	void drawCircleByAlgorithm(Point2D* point, float radius, Color color);
 	void drawElipseByAlgorithm(Point2D* point, float radiusX, float radiusY, Color color);
 	void drawBrokenLine(std::vector<Point2D> vec, Color color);
