@@ -1,5 +1,4 @@
 #pragma once
-#include <SFML/Graphics.hpp>
 #include "Point2D.h"
 #include "PrimitiveRenderer.h"
 
@@ -8,7 +7,7 @@
 
 using namespace sf;
 
-class LineSegment 
+class LineSegment : public ShapeObject
 {
 private:
 	Point2D first;

@@ -1,15 +1,12 @@
 #pragma once
-#include <SFML/Graphics.hpp>
+#include "ShapeObject.h"
 
 #ifndef point2d_h
 #define point2d_h
 using namespace sf;
 
-class Point2D
+class Point2D : public ShapeObject 
 {
-private:
-	float x;
-	float y;
 public:
 	Point2D(float x, float y);
 	Point2D();

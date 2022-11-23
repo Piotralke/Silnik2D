@@ -127,6 +127,11 @@ void Engine::gameLoop()
     eventRegister(sf::Keyboard::F, &chuj, false);
     eventRegister(sf::Keyboard::W, &chuj2, false);
    // reportError(UNKNOWN_ER, __FILE__, __LINE__);
+    Vector2f dupa(300.0, 300.0);
+    Vector2f dupa2(50, 50);
+    point3.setPosition(dupa);
+    point3.translate(dupa2);
+    //test.scale(5);
 
     while (window->isOpen())
     {
@@ -143,6 +148,7 @@ void Engine::gameLoop()
             }
             
         }
+        
         window->clear();
         //pr.drawFilledRectangle(&point, 100, 100, Color::Red);
         //pr.drawRectangle(&point2, 200, 200, Color::Green);
@@ -158,7 +164,6 @@ void Engine::gameLoop()
         //test.draw(1, &pr, Color::White);
         pr.drawCircleByAlgorithm(&point, 70 ,Color::Red);
         pr.drawElipseByAlgorithm(&point, 100,50 ,Color::Cyan);
-
         pr.drawBrokenLine(vector, Color::White);
         pr.drawLineByAlgorithm(&point, &point3, Color::Green);
         //pr.floodFill(&pointFill, Color::Magenta, Color::Black);

@@ -29,6 +29,6 @@ void LineSegment::draw(int mode, PrimitiveRenderer* pr, Color color)
 	}
 	else if (mode == 2) //tu bedzie pokazanie algorytmem
 	{
-
+		pr->drawLineByAlgorithm(&first, &second, color);
 	}
 }
