@@ -9,10 +9,10 @@ protected:
 	Vector2f position;
 	Vector2u size;
 public:
-	void setPosition(Vector2f& position);
-	Vector2f getPosition();
-	void setSize(Vector2u size);
-	Vector2u getSize();
+	virtual void setPosition(Vector2f& position);
+	virtual Vector2f getPosition();
+	virtual void setSize(Vector2u size);
+	virtual Vector2u getSize();
 };
 #endif // gameobject_h
 

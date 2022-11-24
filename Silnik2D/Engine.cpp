@@ -2,9 +2,11 @@
 #pragma warning(disable : 4996)
 #include "Engine.h"
 
-
+Vector2f moveVector(0, 0);
 Engine* Engine::instance = nullptr;
-
+Vector2f position(50, 50);
+Vector2u playersize(50, 50);
+Player player(position, playersize);
 Engine::Engine(RenderWindow* window)
 {
     this->window = window;
@@ -68,7 +70,26 @@ void Engine::eventRegister(int key, void (*function)(),bool hold)
         holdableKeys.insert(key);
     }
 }
+void gora()
+{
+    moveVector.y = -1;
 
+}
+void dol()
+{
+    moveVector.y = 1;
+
+}
+void lewo()
+{
+    moveVector.x = -1;
+
+}
+void prawo()
+{
+    moveVector.x = 1;
+
+}
 void chuj()
 {
     Engine* engine = Engine::getInstance();
@@ -122,19 +143,37 @@ void Engine::gameLoop()
     Point2D pointFill(480, 470);
     Point2D pointFillBoundry(530, 540);
     LineSegment test(point3, point4);
+    Vector2f v1(50, 50);
+    Vector2f v2(50, 100);
+    Vector2f v3(100, 100);
+    Vector2f v4(100,50 );
 
     PrimitiveRenderer pr(window);
+    eventRegister(sf::Keyboard::W, &gora, true);
+    eventRegister(sf::Keyboard::A, &lewo, true);
+    eventRegister(sf::Keyboard::S, &dol, true);
+    eventRegister(sf::Keyboard::D, &prawo, true);
     eventRegister(sf::Keyboard::F, &chuj, false);
-    eventRegister(sf::Keyboard::W, &chuj2, false);
+    eventRegister(sf::Keyboard::G, &chuj2, false);
+
    // reportError(UNKNOWN_ER, __FILE__, __LINE__);
     Vector2f dupa(300.0, 300.0);
     Vector2f dupa2(50, 50);
     point3.setPosition(dupa);
     point3.translate(dupa2);
     //test.scale(5);
+    std::vector<Vector2f> vec;
+    vec.push_back(v1);
+    vec.push_back(v2);
+    vec.push_back(v3);
+    vec.push_back(v4);
+    Vector2f dupa3(75.0, 75.0);
+    Vector2u size(50, 50);
 
     while (window->isOpen())
     {
+        moveVector = Vector2f(0, 0);
+       
         updateTimer();
         if (window->pollEvent(event))
         {
@@ -148,27 +187,27 @@ void Engine::gameLoop()
             }
             
         }
-        
+        player.update(moveVector);
         window->clear();
+        player.draw(window, Color::Red);
         //pr.drawFilledRectangle(&point, 100, 100, Color::Red);
         //pr.drawRectangle(&point2, 200, 200, Color::Green);
         //pr.drawLine(&point, &point2, Color::Blue);
        // clearScreen(Color::Red);
-        std::vector<Point2D> vector;
-        vector.push_back(point);
-        vector.push_back(point2);
-        vector.push_back(point3);
-        vector.push_back(point4);
-        //pr.drawConvexShape(vector,sf::Color::Green);
-        //pr.drawCircle(&point, 120.5, Color::Magenta);
-        //test.draw(1, &pr, Color::White);
-        pr.drawCircleByAlgorithm(&point, 70 ,Color::Red);
-        pr.drawElipseByAlgorithm(&point, 100,50 ,Color::Cyan);
-        pr.drawBrokenLine(vector, Color::White);
-        pr.drawLineByAlgorithm(&point, &point3, Color::Green);
+        //std::vector<Point2D> vector;
+        //vector.push_back(point);
+        //vector.push_back(point2);
+        //vector.push_back(point3);
+        //vector.push_back(point4);
+        ////pr.drawConvexShape(vector,sf::Color::Green);
+        ////pr.drawCircle(&point, 120.5, Color::Magenta);
+        ////test.draw(1, &pr, Color::White);
+        //pr.drawCircleByAlgorithm(&point, 70 ,Color::Red);
+        //pr.drawElipseByAlgorithm(&point, 100,50 ,Color::Cyan);
+        //pr.drawBrokenLine(vector, Color::White);
+        //pr.drawLineByAlgorithm(&point, &point3, Color::Green);
         //pr.floodFill(&pointFill, Color::Magenta, Color::Black);
-       // pr.boundryFill(&pointFillBoundry, Color::Magenta, Color::White);
-        
+       // pr.boundryFill(&pointFillBoundry, Color::Magenta, Color::White);;
         //window.draw(shape);
         window->display();
     }

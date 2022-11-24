@@ -6,7 +6,7 @@
 class UpdatableObject : virtual public GameObject
 {
 public:
-	virtual void update()=0;
+	void update();
 };
 
 #endif // !updatableobject_h

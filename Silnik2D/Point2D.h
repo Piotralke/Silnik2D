@@ -17,6 +17,7 @@ public:
 	void setY(float y);
 	Vector2f getVector();
 	Point2D getPoint();
+	virtual void draw(RenderWindow* window, Color color);
 };
 
 #endif

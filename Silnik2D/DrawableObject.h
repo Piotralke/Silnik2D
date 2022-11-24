@@ -6,6 +6,7 @@
 class DrawableObject : virtual public GameObject
 {
 public:
-	virtual void draw(RenderWindow* window) = 0;
+	virtual void draw()=0;
+	
 };
 #endif // !drawableobject_h

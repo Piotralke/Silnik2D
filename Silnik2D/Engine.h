@@ -8,6 +8,8 @@
 #include<fstream>
 #include<time.h>
 #include<ctime>
+#include "RectangleObject.h"
+#include "Player.h"
 #ifndef engine_h
 #define engine_h
 

@@ -39,3 +39,8 @@ Point2D Point2D::getPoint()
 {
 	return Point2D(this->position.x, this->position.y);
 }
+void Point2D::draw(RenderWindow* window, Color color)
+{
+	sf::Vertex vertex(this->getVector(), color);
+	window->draw(&vertex, 1, sf::Points);
+}

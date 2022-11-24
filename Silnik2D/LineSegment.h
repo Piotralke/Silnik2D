@@ -19,6 +19,9 @@ public:
 	void setFirst(Point2D point);
 	void setSecond(Point2D point);
 	void draw(int mode, PrimitiveRenderer* pr, Color color);
+	void translate(Vector2f vector);
+	void rotate(Vector2f& point, float alfa);
+	void scale(Vector2f& point, float k);
 };
 
 #endif

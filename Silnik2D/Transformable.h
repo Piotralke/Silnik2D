@@ -6,8 +6,9 @@
 class TransformableObject : virtual public GameObject
 {
 public:
-	void translate();
-	void rotate();
-	void scale();
+	virtual void translate(Vector2f vector);
+	virtual void rotate(Vector2f& point, float alfa);
+	virtual void scale(float k);
+	virtual void scale(Vector2f& point, float k);
 };
 #endif 
