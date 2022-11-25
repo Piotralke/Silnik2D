@@ -192,7 +192,6 @@ void Engine::gameLoop()
                 
         }
         
-
         updateTimer();
         if (window->pollEvent(event))
         {
