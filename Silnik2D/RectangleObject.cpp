@@ -1,14 +1,16 @@
 #include "RectangleObject.h"
+#include <iostream>
 void RectangleObject::translate(Vector2f vector)
 {
 	if (vector.x != 0 || vector.y != 0)
 	{
+		Vector2f newPosition = Vector2f(position.x + vector.x, position.y - vector.y);
+		this->setPosition(newPosition);
 		for (int i = 0; i < this->points.size(); i++)
 		{
-
-			Vector2f newPosition = Vector2f(position.x + vector.x, position.y - vector.y);
-			this->points[i].x = newPosition.x;
-			this->points[i].y = newPosition.y;
+			this->points[i].x += vector.x;
+			this->points[i].y -= vector.y;
+			
 		}
 	}
 	
@@ -16,6 +18,7 @@ void RectangleObject::translate(Vector2f vector)
 }
 void RectangleObject::rotate(Vector2f& point, float alfa)
 {
+
 	float x = point.x;
 	float y = point.y;
 	for (int i = 0; i < this->points.size(); i++)

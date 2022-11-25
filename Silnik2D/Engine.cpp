@@ -72,22 +72,22 @@ void Engine::eventRegister(int key, void (*function)(),bool hold)
 }
 void gora()
 {
-    moveVector.y = -1;
+    moveVector.y = 5;
 
 }
 void dol()
 {
-    moveVector.y = 1;
+    moveVector.y = -5;
 
 }
 void lewo()
 {
-    moveVector.x = -1;
+    moveVector.x = -5;
 
 }
 void prawo()
 {
-    moveVector.x = 1;
+    moveVector.x = 5;
 
 }
 void chuj()
@@ -169,11 +169,30 @@ void Engine::gameLoop()
     vec.push_back(v4);
     Vector2f dupa3(75.0, 75.0);
     Vector2u size(50, 50);
-
+    Vector2f currentMousePos;
     while (window->isOpen())
     {
         moveVector = Vector2f(0, 0);
-       
+        float alfa = 0;
+        currentMousePos = window->mapPixelToCoords(sf::Mouse::getPosition(*window));
+        {
+          //  Sleep(20);
+            std::cout << "current:" << currentMousePos.x << ", " << currentMousePos.y << std::endl;
+            Vector2f rotVec = Vector2f(player.getPosition().x + (player.getSize().x / 2), player.getPosition().y + (player.getSize().y / 2));
+			Vector2f rotVec2 = Vector2f((player.points[1].x+player.points[2].x)/2, (player.points[1].y + player.points[2].y)/2);
+            if (rotVec2.x - rotVec.x != 0 && (currentMousePos.x - rotVec.x) != 0)
+            {
+                float a = (rotVec2.y - rotVec.y) / (rotVec2.x - rotVec.x);
+                float a2 = (currentMousePos.y - rotVec.y) / (currentMousePos.x - rotVec.x); // wsp kier nowy
+                if (a * a2 != -1 || a == a2)
+                    alfa = -atan((a - a2) / (1 + a * a2));
+                std::cout << "alfa: " << alfa << std::endl;
+                std::cout << "a2: " << a2 << std::endl;
+            }
+                
+        }
+        
+
         updateTimer();
         if (window->pollEvent(event))
         {
@@ -187,7 +206,8 @@ void Engine::gameLoop()
             }
             
         }
-        player.update(moveVector);
+       // std::cout << previousMousePos.x << ", " << previousMousePos.y << std::endl;
+       player.update(moveVector,alfa);
         window->clear();
         player.draw(window, Color::Red);
         //pr.drawFilledRectangle(&point, 100, 100, Color::Red);

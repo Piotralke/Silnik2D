@@ -12,7 +12,7 @@ public:
 	{
 		
 	}
-	void update(Vector2f moveVector);
+	void update(Vector2f moveVector,float alfa);
 	//void draw(RenderWindow* window);
 };
 #endif // !player_h
