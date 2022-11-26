@@ -11,6 +11,7 @@
 #include "RectangleObject.h"
 #include "Player.h"
 #include <Windows.h>
+#include "BitmapHandler.h"
 #ifndef engine_h
 #define engine_h
 

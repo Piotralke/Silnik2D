@@ -144,6 +144,8 @@
     <ClCompile Include="PrimitiveRenderer.cpp" />
     <ClCompile Include="RectangleObject.cpp" />
     <ClCompile Include="ShapeObject.cpp" />
+    <ClCompile Include="AnimatedObject.cpp" />
+    <ClCompile Include="SpriteObject.cpp" />
     <ClCompile Include="TransformableObject.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +161,7 @@
     <ClInclude Include="PrimitiveRenderer.h" />
     <ClInclude Include="RectangleObject.h" />
     <ClInclude Include="ShapeObject.h" />
+    <ClInclude Include="SpriteObject.h" />
     <ClInclude Include="Transformable.h" />
     <ClInclude Include="UpdatableObject.h" />
   </ItemGroup>

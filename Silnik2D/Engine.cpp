@@ -4,9 +4,6 @@
 
 Vector2f moveVector(0, 0);
 Engine* Engine::instance = nullptr;
-Vector2f position(50, 50);
-Vector2u playersize(50, 50);
-Player player(position, playersize);
 Engine::Engine(RenderWindow* window)
 {
     this->window = window;
@@ -148,6 +145,23 @@ void Engine::gameLoop()
     Vector2f v3(100, 100);
     Vector2f v4(100,50 );
 
+    BitmapHandler bitmapHandler;
+    bitmapHandler.loadBitmap("1", "1.png");
+    bitmapHandler.loadBitmap("2", "2.png");
+    bitmapHandler.loadBitmap("3", "3.png");
+    bitmapHandler.loadBitmap("4", "4.png");
+    bitmapHandler.loadBitmap("5", "5.png");
+    bitmapHandler.loadBitmap("6", "6.png");
+    std::vector<Texture> playerAnimation;
+    for (int i = 0; i < 6; i++)
+    {
+        String tmp = std::to_string(i+1); 
+        playerAnimation.push_back(*bitmapHandler.getTexture(tmp));
+    }
+    Vector2f position(50, 50);
+    Vector2u playersize(50, 50);
+    Player player(&playerAnimation, 0.5,position, playersize);
+
     PrimitiveRenderer pr(window);
     eventRegister(sf::Keyboard::W, &gora, true);
     eventRegister(sf::Keyboard::A, &lewo, true);
@@ -170,8 +184,12 @@ void Engine::gameLoop()
     Vector2f dupa3(75.0, 75.0);
     Vector2u size(50, 50);
     Vector2f currentMousePos;
+    Clock clock;
+    float deltaTime;
+    float a;
     while (window->isOpen())
     {
+        deltaTime = clock.restart().asSeconds();
         moveVector = Vector2f(0, 0);
         float alfa = 0;
         currentMousePos = window->mapPixelToCoords(sf::Mouse::getPosition(*window));
@@ -182,7 +200,7 @@ void Engine::gameLoop()
 			Vector2f rotVec2 = Vector2f((player.points[1].x+player.points[2].x)/2, (player.points[1].y + player.points[2].y)/2);
             if (rotVec2.x - rotVec.x != 0 && (currentMousePos.x - rotVec.x) != 0)
             {
-                float a = (rotVec2.y - rotVec.y) / (rotVec2.x - rotVec.x);
+                a = (rotVec2.y - rotVec.y) / (rotVec2.x - rotVec.x);
                 float a2 = (currentMousePos.y - rotVec.y) / (currentMousePos.x - rotVec.x); // wsp kier nowy
                 if (a * a2 != -1 || a == a2)
                     alfa = -atan((a - a2) / (1 + a * a2));
@@ -207,8 +225,10 @@ void Engine::gameLoop()
         }
        // std::cout << previousMousePos.x << ", " << previousMousePos.y << std::endl;
        player.update(moveVector,alfa);
+       player.animate(deltaTime);
         window->clear();
-        player.draw(window, Color::Red);
+
+        player.draw(window,alfa);
         //pr.drawFilledRectangle(&point, 100, 100, Color::Red);
         //pr.drawRectangle(&point2, 200, 200, Color::Green);
         //pr.drawLine(&point, &point2, Color::Blue);

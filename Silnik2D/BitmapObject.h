@@ -11,6 +11,7 @@ class BitmapObject: virtual public DrawableObject, virtual public TransformableO
 protected:
 	Texture texture;
 public:
+	BitmapObject(){}
 	BitmapObject(Vector2f position, Vector2u size, Texture texture)
 	{
 		this->setPosition(position);

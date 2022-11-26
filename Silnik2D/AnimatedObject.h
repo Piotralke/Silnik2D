@@ -5,7 +5,8 @@
 class AnimatedObject: virtual public GameObject
 {
 public:
-	AnimatedObject(std::vector<Texture> textures,float switchTime)
+	AnimatedObject(){}
+	AnimatedObject(std::vector<Texture>* textures,float switchTime)
 	{
 		this->switchTime = switchTime;
 		this->textures = textures;
@@ -15,5 +16,6 @@ public:
 protected:
 	float switchTime;
 	float totalTime;
-	std::vector<Texture> textures;
+	int index;
+	std::vector<Texture>* textures;
 };

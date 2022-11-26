@@ -1,14 +1,13 @@
-#include "RectangleObject.h"
-#include <iostream>
+#include "SpriteObject.h"
 
-void RectangleObject::draw(RenderWindow* window, Color color)
+void SpriteObject::draw(RenderWindow* window)
 {
+	this->texture = textures->at(index);
 	ConvexShape cs = ConvexShape(this->points.size());
 	for (int i = 0; i < this->points.size(); i++)
 	{
 		cs.setPoint(i, points[i]);
 	}
-	cs.setFillColor(color);
+	cs.setTexture(&this->texture);
 	window->draw(cs);
-
 }
