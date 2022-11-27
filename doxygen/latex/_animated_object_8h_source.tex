@@ -1,0 +1,28 @@
+\hypertarget{_animated_object_8h_source}{}\doxysection{Animated\+Object.\+h}
+\label{_animated_object_8h_source}\index{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/AnimatedObject.h@{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/AnimatedObject.h}}
+\mbox{\hyperlink{_animated_object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_game_object_8h}{GameObject.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_animated_object}{AnimatedObject}}: \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16    }
+\DoxyCodeLine{21     \mbox{\hyperlink{class_animated_object_afd1cf67dfc81e5f28c790dc2dabc63f8}{AnimatedObject}}()\{\}}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_animated_object_a4fb6e26121e06739427a15538c7ac25a}{AnimatedObject}}(std::vector<Texture>* \mbox{\hyperlink{class_animated_object_ac3cd0f9b0157f81dd898ae79f8b69a46}{textures}},\textcolor{keywordtype}{float} \mbox{\hyperlink{class_animated_object_a2666f27c8f77b6bb4f6dfb5a6a49a9d7}{switchTime}})}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30         this-\/>switchTime = \mbox{\hyperlink{class_animated_object_a2666f27c8f77b6bb4f6dfb5a6a49a9d7}{switchTime}}; }
+\DoxyCodeLine{31         this-\/>textures = \mbox{\hyperlink{class_animated_object_ac3cd0f9b0157f81dd898ae79f8b69a46}{textures}};}
+\DoxyCodeLine{32         this-\/>\mbox{\hyperlink{class_animated_object_a9ab0f63e00958317fbe149e29d61727d}{totalTime}} = 0.0;}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{38     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_animated_object_a77daf47b672986559e6add7f9c21d725}{animate}}(\textcolor{keywordtype}{float} deltaTime);}
+\DoxyCodeLine{39 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{40     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_animated_object_a2666f27c8f77b6bb4f6dfb5a6a49a9d7}{switchTime}};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_animated_object_a9ab0f63e00958317fbe149e29d61727d}{totalTime}};}
+\DoxyCodeLine{42     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_animated_object_a8bd3114a5d219016e8638fc41119d9fc}{index}};}
+\DoxyCodeLine{43     std::vector<Texture>* \mbox{\hyperlink{class_animated_object_ac3cd0f9b0157f81dd898ae79f8b69a46}{textures}};}
+\DoxyCodeLine{44 \};}
+
+\end{DoxyCode}

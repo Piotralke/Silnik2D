@@ -1,0 +1,31 @@
+\hypertarget{_bitmap_object_8h_source}{}\doxysection{Bitmap\+Object.\+h}
+\label{_bitmap_object_8h_source}\index{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/BitmapObject.h@{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/BitmapObject.h}}
+\mbox{\hyperlink{_bitmap_object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_drawable_object_8h}{DrawableObject.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_transformable_8h}{Transformable.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef bitmapobject\_h}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define bitmapobject\_h}}
+\DoxyCodeLine{11 \textcolor{keyword}{using namespace }sf;}
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_bitmap_object}{BitmapObject}}: \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{class_drawable_object}{DrawableObject}}, \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{class_transformable_object}{TransformableObject}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{19     Texture \mbox{\hyperlink{class_bitmap_object_a79d4dc67627e65db75441a80e69b58cb}{texture}};}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_bitmap_object_ab3a3f49b1a0318ea03e29bff8c6dfb24}{BitmapObject}}()\{\}}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_bitmap_object_afb756cb2e2d48a37ddfd5c01152a3c6f}{BitmapObject}}(Vector2f \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}, Vector2u \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}}, Texture* \mbox{\hyperlink{class_bitmap_object_a79d4dc67627e65db75441a80e69b58cb}{texture}})}
+\DoxyCodeLine{32         :\mbox{\hyperlink{class_game_object}{GameObject}}(\mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}},\mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}})}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         this-\/>\mbox{\hyperlink{class_game_object_a5829b670bde3351faf8c69e3d12df730}{setPosition}}(position);}
+\DoxyCodeLine{35         this-\/>\mbox{\hyperlink{class_game_object_a119a2f6a39ade5e9ba491e333ebce14b}{setSize}}(size);}
+\DoxyCodeLine{36         this-\/>texture = *\mbox{\hyperlink{class_bitmap_object_a79d4dc67627e65db75441a80e69b58cb}{texture}};}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_drawable_object_af2c5d0c3a304690dfa3dda389c7ea7db}{draw}}(RenderWindow* window);}
+\DoxyCodeLine{43 \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !bitmapobject\_h}}
+
+\end{DoxyCode}

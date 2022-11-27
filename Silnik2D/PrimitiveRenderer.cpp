@@ -163,11 +163,12 @@ void PrimitiveRenderer::drawFilledCircle(Point2D* point, float radius, Color col
 	shape.setOutlineColor(color);
 	window->draw(shape);
 }
-void PrimitiveRenderer::drawBrokenLine(std::vector<Point2D> vec, Color color)
+void PrimitiveRenderer::drawBrokenLine(std::vector<Point2D> vec, Color color, bool closed)
 {
 	for (int i = 1; i < vec.size(); i++)
 		PrimitiveRenderer::drawLine(&vec[i-1], &vec[i], color);
-	PrimitiveRenderer::drawLine(&vec[vec.size()-1], &vec[0], color);
+	if(closed)
+		PrimitiveRenderer::drawLine(&vec[vec.size()-1], &vec[0], color);
 }
 void PrimitiveRenderer::floodFill(Point2D* point, Color fillColor, Color backgroundColor)
 {

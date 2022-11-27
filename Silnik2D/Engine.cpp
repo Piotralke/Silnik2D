@@ -3,6 +3,7 @@
 #include "Engine.h"
 
 Vector2f moveVector(0, 0);
+bool moving;
 Engine* Engine::instance = nullptr;
 Engine::Engine(RenderWindow* window)
 {
@@ -59,13 +60,21 @@ void Engine::clearScreen(Color color)
 	window->clear(color);
 }
 
-void Engine::eventRegister(int key, void (*function)(),bool hold)
+void Engine::keyboardEventRegister(int key, void (*function)(),bool hold)
 {
-    keyToFuncMap.insert(make_pair(key,function));
+	keyboardToFuncMap.insert(make_pair(key,function));
     if (hold)
     {
         holdableKeys.insert(key);
     }
+}
+void Engine::mouseEventRegister(int key, void (*function)(), bool hold)
+{
+	mouseToFuncMap.insert(make_pair(key, function));
+	if (hold)
+	{
+		holdableKeys.insert(key);
+	}
 }
 void gora()
 {
@@ -87,24 +96,40 @@ void prawo()
     moveVector.x = 5;
 
 }
-void chuj()
+void makeCircle()
+{
+    Engine* engine = Engine::getInstance();
+    RenderWindow* window = engine->getWindow();
+    PrimitiveRenderer pr(window);
+    Point2D point(window->mapPixelToCoords(sf::Mouse::getPosition(*window)));
+    engine->pointVector.push_back(point);
+}
+void setFullscreen()
 {
     Engine* engine = Engine::getInstance();
     engine->enableFullscreen(true);
 }
-void chuj2()
+void setWindowed()
 {
     Engine* engine = Engine::getInstance();
     engine->enableFullscreen(false);
 }
 
-void Engine::handleAction(Event* event)
+void Engine::handleActionKeyboard(Event* event)
 {
-    if (keyToFuncMap.count(event->key.code))
+    if (keyboardToFuncMap.count(event->key.code))
     {
-        auto action = keyToFuncMap.find(event->key.code)->second;
+        auto action = keyboardToFuncMap.find(event->key.code)->second;
         action();
     }
+}
+void Engine::handleActionMouse(Event* event)
+{
+	if (mouseToFuncMap.count(event->key.code))
+	{
+		auto action = mouseToFuncMap.find(event->key.code)->second;
+		action();
+	}
 }
 void Engine::enableMouse(bool value)
 {
@@ -152,103 +177,110 @@ void Engine::gameLoop()
     bitmapHandler.loadBitmap("4", "4.png");
     bitmapHandler.loadBitmap("5", "5.png");
     bitmapHandler.loadBitmap("6", "6.png");
+    bitmapHandler.loadBitmap("background", "background.png");
     std::vector<Texture> playerAnimation;
     for (int i = 0; i < 6; i++)
     {
         String tmp = std::to_string(i+1); 
         playerAnimation.push_back(*bitmapHandler.getTexture(tmp));
     }
-    Vector2f position(50, 50);
-    Vector2u playersize(50, 50);
+    Vector2f position(500, 500);
+    Vector2u playersize(100, 100);
     Player player(&playerAnimation, 0.5,position, playersize);
 
     PrimitiveRenderer pr(window);
-    eventRegister(sf::Keyboard::W, &gora, true);
-    eventRegister(sf::Keyboard::A, &lewo, true);
-    eventRegister(sf::Keyboard::S, &dol, true);
-    eventRegister(sf::Keyboard::D, &prawo, true);
-    eventRegister(sf::Keyboard::F, &chuj, false);
-    eventRegister(sf::Keyboard::G, &chuj2, false);
+	keyboardEventRegister(sf::Keyboard::W, &gora, true);
+	keyboardEventRegister(sf::Keyboard::A, &lewo, true);
+	keyboardEventRegister(sf::Keyboard::S, &dol, true);
+	keyboardEventRegister(sf::Keyboard::D, &prawo, true);
+	keyboardEventRegister(sf::Keyboard::F, &setFullscreen, false);
+	keyboardEventRegister(sf::Keyboard::G, &setWindowed, false);
+    mouseEventRegister(sf::Mouse::Left, &makeCircle, false);
 
    // reportError(UNKNOWN_ER, __FILE__, __LINE__);
-    Vector2f dupa(300.0, 300.0);
-    Vector2f dupa2(50, 50);
-    point3.setPosition(dupa);
-    point3.translate(dupa2);
     //test.scale(5);
     std::vector<Vector2f> vec;
     vec.push_back(v1);
     vec.push_back(v2);
     vec.push_back(v3);
     vec.push_back(v4);
-    Vector2f dupa3(75.0, 75.0);
     Vector2u size(50, 50);
     Vector2f currentMousePos;
     Clock clock;
     float deltaTime;
-    float a;
+    float mainRotation = 0;
+    BitmapObject background(Vector2f(0, 0), Vector2u(width,height), bitmapHandler.getTexture("background"));
     while (window->isOpen())
     {
         deltaTime = clock.restart().asSeconds();
         moveVector = Vector2f(0, 0);
         float alfa = 0;
+		float beta = 0;
         currentMousePos = window->mapPixelToCoords(sf::Mouse::getPosition(*window));
         {
-          //  Sleep(20);
-            std::cout << "current:" << currentMousePos.x << ", " << currentMousePos.y << std::endl;
-            Vector2f rotVec = Vector2f(player.getPosition().x + (player.getSize().x / 2), player.getPosition().y + (player.getSize().y / 2));
-			Vector2f rotVec2 = Vector2f((player.points[1].x+player.points[2].x)/2, (player.points[1].y + player.points[2].y)/2);
+
+            Vector2f rotVec = Vector2f(player.cs.getOrigin().x, player.cs.getOrigin().y);
+
+			Vector2f rotVec2 = Vector2f((player.cs.getOrigin().x + player.getSize().x)/2, (player.cs.getOrigin().y));
+
             if (rotVec2.x - rotVec.x != 0 && (currentMousePos.x - rotVec.x) != 0)
             {
-                a = (rotVec2.y - rotVec.y) / (rotVec2.x - rotVec.x);
-                float a2 = (currentMousePos.y - rotVec.y) / (currentMousePos.x - rotVec.x); // wsp kier nowy
-                if (a * a2 != -1 || a == a2)
-                    alfa = -atan((a - a2) / (1 + a * a2));
-                std::cout << "alfa: " << alfa << std::endl;
-                std::cout << "a2: " << a2 << std::endl;
+				alfa = atan2((currentMousePos.y - rotVec.y), (currentMousePos.x - rotVec.x)); //-atan((xA - a2) / (1 + xA * a2));
+				alfa *= (180 / M_PI);
             }
                 
         }
-        
+        //moving = false;
         updateTimer();
         if (window->pollEvent(event))
         {
             if (event.type == Event::MouseButtonPressed && mouseOn)
             {
-                handleAction(&event);
+                handleActionMouse(&event);
             }
             else if (event.type == Event::KeyPressed && keyboardOn)
             {
-                handleAction(&event);
+                handleActionKeyboard(&event);
+            }
+            else if (event.type == Event::Closed)
+            {
+                window->close();
             }
             
         }
        // std::cout << previousMousePos.x << ", " << previousMousePos.y << std::endl;
-       player.update(moveVector,alfa);
-       player.animate(deltaTime);
+        player.update(moveVector);
+        player.animate(deltaTime);
         window->clear();
-
-        player.draw(window,alfa);
-        //pr.drawFilledRectangle(&point, 100, 100, Color::Red);
+        background.draw(window);
+        pr.drawFilledRectangle(&point, 100, 100, Color::Red);
+        for (int i = 0; i < pointVector.size(); i++)
+        {
+            pr.drawFilledCircle(&pointVector.at(i), 10.0, Color::Cyan);
+        }
+        player.draw(window, alfa);
         //pr.drawRectangle(&point2, 200, 200, Color::Green);
         //pr.drawLine(&point, &point2, Color::Blue);
        // clearScreen(Color::Red);
-        //std::vector<Point2D> vector;
-        //vector.push_back(point);
-        //vector.push_back(point2);
-        //vector.push_back(point3);
-        //vector.push_back(point4);
+        std::vector<Point2D> vector;
+        vector.push_back(point);
+        vector.push_back(point2);
+        vector.push_back(point3);
+        vector.push_back(point4);
         ////pr.drawConvexShape(vector,sf::Color::Green);
         ////pr.drawCircle(&point, 120.5, Color::Magenta);
         ////test.draw(1, &pr, Color::White);
-        //pr.drawCircleByAlgorithm(&point, 70 ,Color::Red);
-        //pr.drawElipseByAlgorithm(&point, 100,50 ,Color::Cyan);
-        //pr.drawBrokenLine(vector, Color::White);
-        //pr.drawLineByAlgorithm(&point, &point3, Color::Green);
+        pr.drawCircleByAlgorithm(&point, 70 ,Color::Red);
+        pr.drawElipseByAlgorithm(&point, 100,50 ,Color::Cyan);
+        pr.drawBrokenLine(vector, Color::White,true);
+        pr.drawLineByAlgorithm(&point, &point3, Color::Green);
         //pr.floodFill(&pointFill, Color::Magenta, Color::Black);
-       // pr.boundryFill(&pointFillBoundry, Color::Magenta, Color::White);;
+        //pr.boundryFill(&pointFillBoundry, Color::Magenta, Color::White);;
         //window.draw(shape);
         window->display();
     }
     closeGame();
+}
+RenderWindow* Engine::getWindow(){
+    return window;
 }

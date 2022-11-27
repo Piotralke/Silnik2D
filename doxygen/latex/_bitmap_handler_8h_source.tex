@@ -1,0 +1,30 @@
+\hypertarget{_bitmap_handler_8h_source}{}\doxysection{Bitmap\+Handler.\+h}
+\label{_bitmap_handler_8h_source}\index{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/BitmapHandler.h@{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/BitmapHandler.h}}
+\mbox{\hyperlink{_bitmap_handler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef bitmaphandler\_h}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define bitmaphandler\_h}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}SFML/Graphics.hpp"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }sf;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_bitmap_handler}{BitmapHandler}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18     std::map<std::string, Texture*> textureRepo;}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_bitmap_handler_a66410bb36dd297b75a9ec6e8949a49fc}{BitmapHandler}}();}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_bitmap_handler_a1f3e49ed094cc684909c97d3b56fa2e9}{\string~BitmapHandler}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bitmap_handler_a7725b23748ba2fbe77ac6c18f57a2fb2}{deleteBitmap}}(std::string name);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bitmap_handler_ab512b46082acac27fa9ef48107bd993d}{loadBitmap}}(std::string name, std::string src);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bitmap_handler_a1dffc2e5086341c12a77d9531eeeb53a}{saveBitmap}}(std::string name, std::string src);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bitmap_handler_a9f692c3120b667a090839b759ead8c44}{addBitmap}}(std::string name, Texture texture);}
+\DoxyCodeLine{56     Texture* \mbox{\hyperlink{class_bitmap_handler_aef7f0497b19f53220fc5ade825115c06}{getTexture}}(std::string name);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !bitmaphandler\_h}}
+
+\end{DoxyCode}

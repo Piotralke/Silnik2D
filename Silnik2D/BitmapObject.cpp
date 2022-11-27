@@ -7,6 +7,7 @@ void BitmapObject::draw(RenderWindow* window)
 	{
 		cs.setPoint(i, points[i]);
 	}
+	cs.setPosition(getPosition());
 	cs.setTexture(&this->texture);
 	window->draw(cs);
 

@@ -1,0 +1,25 @@
+\hypertarget{_sprite_object_8h_source}{}\doxysection{Sprite\+Object.\+h}
+\label{_sprite_object_8h_source}\index{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/SpriteObject.h@{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/SpriteObject.h}}
+\mbox{\hyperlink{_sprite_object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef spriteobject\_h}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define spriteobject\_h}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_bitmap_object_8h}{BitmapObject.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_animated_object_8h}{AnimatedObject.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_sprite_object}{SpriteObject}}: \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{class_bitmap_object}{BitmapObject}},\textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{class_animated_object}{AnimatedObject}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_sprite_object_a4880a38462c5e1733039d5fb6e2ff3e9}{SpriteObject}}(std::vector<Texture>* \mbox{\hyperlink{class_animated_object_ac3cd0f9b0157f81dd898ae79f8b69a46}{textures}}, \textcolor{keywordtype}{float} \mbox{\hyperlink{class_animated_object_a2666f27c8f77b6bb4f6dfb5a6a49a9d7}{switchTime}}, Vector2f \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}, Vector2u \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}})}
+\DoxyCodeLine{22         :\mbox{\hyperlink{class_animated_object}{AnimatedObject}}(\mbox{\hyperlink{class_animated_object_ac3cd0f9b0157f81dd898ae79f8b69a46}{textures}},\mbox{\hyperlink{class_animated_object_a2666f27c8f77b6bb4f6dfb5a6a49a9d7}{switchTime}})}
+\DoxyCodeLine{23     \{}
+\DoxyCodeLine{24         \mbox{\hyperlink{class_game_object_a119a2f6a39ade5e9ba491e333ebce14b}{setSize}}(\mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}});}
+\DoxyCodeLine{25         \mbox{\hyperlink{class_game_object_a5829b670bde3351faf8c69e3d12df730}{setPosition}}(\mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}});}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{30     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_drawable_object_af2c5d0c3a304690dfa3dda389c7ea7db}{draw}}(RenderWindow* window);}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !1}}
+
+\end{DoxyCode}

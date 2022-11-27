@@ -1,14 +1,27 @@
+/**
+* @file RectangleObject.h
+* @brief Plik naglowkowy RectangleObject.h
+**/
 #pragma once
 #ifndef rectangleobject_h
 #define rectangleobject_h
 #include "ShapeObject.h"
+/**
+* @class RectangleObject
+* @brief Klasa reprezentujaca prostokat
+**/
 class RectangleObject : public ShapeObject
 {
 public:
-    RectangleObject()
-	{
-		
-	}
+	/**
+	 * @brief Konstruktor domyslny
+	 */
+    RectangleObject(){}
+	/**
+	* @brief draw - Metoda do rysowania
+	* @param window - Okno na ktorym rusujemy
+	* @param - Kolor
+	**/
 	void draw(RenderWindow* window, Color color);
 };
 

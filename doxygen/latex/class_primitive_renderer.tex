@@ -1,0 +1,363 @@
+\hypertarget{class_primitive_renderer}{}\doxysection{Primitive\+Renderer Class Reference}
+\label{class_primitive_renderer}\index{PrimitiveRenderer@{PrimitiveRenderer}}
+
+
+Klasa odpowiedzialna za renderowanie prymitywow.  
+
+
+
+
+{\ttfamily \#include $<$Primitive\+Renderer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_primitive_renderer_ae0601810e6731fbc883ac424164d493f}{Primitive\+Renderer}} (Render\+Window $\ast$window)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} -\/ Konstruktor klasy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_aed948482a20a6ef679ece3069c7bf348}{draw\+Point}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Point -\/ metoda rysujaca punkt \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_a61c2871f385c4d3e3c72430cb0d5855b}{draw\+Rectangle}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, int width, int height, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Rectangle -\/ metoda rysujaca prostokat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_ac220550d5ff06e60565d9d49b1e97fd9}{draw\+Filled\+Rectangle}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, int width, int height, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Filled\+Rectangle -\/ metoda rysujaca wypelniony prostokat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_a45047cf4e69f32beebd73392d1356f4b}{draw\+Square}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, int x, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Square -\/ metoda rysujaca kwadrat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_a44c28dc4c8476a57a600a0cccb0f6612}{draw\+Filled\+Square}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, int x, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Filled\+Square -\/ metoda rysujaca wypelniony kwadrat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_a370b721906ea290065cdc9d636df2547}{draw\+Line}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point1, \mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point2, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Line -\/ metoda rysujaca linie \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_a0666eb7e399601fa6f5277ca2dcb3bcc}{draw\+Line\+By\+Algorithm}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point1, \mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point2, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Line\+By\+Algorithm -\/ metoda rysujaca linie algorytmem przyrostowym \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_aa1e4c4e5225be9cead679cb082bbe799}{draw\+Convex\+Shape}} (std\+::vector$<$ \mbox{\hyperlink{class_point2_d}{Point2D}} $>$ vec, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Convex\+Shape -\/ metoda rysujaca wielokat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_ad74e944fabe05bd86c234919c04f2618}{draw\+Circle}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, float radius, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Circle -\/ metoda rysujaca okrag \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_a3710ebe98dc1206a604bc19c267732d4}{draw\+Filled\+Circle}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, float radius, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Filled\+Circle -\/ metoda rysujaca wypelniony okrag \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_af9176b9411fd2a8dc387369146cf0cc1}{draw\+Circle\+By\+Algorithm}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, float radius, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Circle\+By\+Algorithm -\/ metoda rysujaca okrag algorytmem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_a9f9bd4342075da31b9fb1ab3ddcf6a01}{draw\+Elipse\+By\+Algorithm}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, float radiusX, float radiusY, Color color)
+\begin{DoxyCompactList}\small\item\em draw\+Elipse\+By\+Algorithm -\/ metoda rysujaca elipse algorytmem \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_afdae8d86d78955a48e228e0fcfd8953b}{draw\+Broken\+Line}} (std\+::vector$<$ \mbox{\hyperlink{class_point2_d}{Point2D}} $>$ vec, Color color, bool closed)
+\begin{DoxyCompactList}\small\item\em draw\+Broken\+Line -\/ Metoda rysujaca otwarta lub zamknieta linie \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_a4649c9a7232f9190172dd55da97800f7}{flood\+Fill}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, Color color, Color background\+Color)
+\begin{DoxyCompactList}\small\item\em flood\+Fill -\/ algorytm wypelniania kolorem \char`\"{}flood\+Fill\char`\"{} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_primitive_renderer_a3a44526e81d556db45e07e62f828b0e6}{boundry\+Fill}} (\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$point, Color fill\+Color, Color boundry\+Color)
+\begin{DoxyCompactList}\small\item\em boundry\+Fill -\/ algorytm wypelniania kolorem \char`\"{}boundry\+Fill\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa odpowiedzialna za renderowanie prymitywow. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_primitive_renderer_ae0601810e6731fbc883ac424164d493f}\label{class_primitive_renderer_ae0601810e6731fbc883ac424164d493f}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!PrimitiveRenderer@{PrimitiveRenderer}}
+\index{PrimitiveRenderer@{PrimitiveRenderer}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{PrimitiveRenderer()}{PrimitiveRenderer()}}
+{\footnotesize\ttfamily Primitive\+Renderer\+::\+Primitive\+Renderer (\begin{DoxyParamCaption}\item[{Render\+Window $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} -\/ Konstruktor klasy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & -\/ Wskaznik na okno gry \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_primitive_renderer_a3a44526e81d556db45e07e62f828b0e6}\label{class_primitive_renderer_a3a44526e81d556db45e07e62f828b0e6}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!boundryFill@{boundryFill}}
+\index{boundryFill@{boundryFill}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{boundryFill()}{boundryFill()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::boundry\+Fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{Color}]{fill\+Color,  }\item[{Color}]{boundry\+Color }\end{DoxyParamCaption})}
+
+
+
+boundry\+Fill -\/ algorytm wypelniania kolorem \char`\"{}boundry\+Fill\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ punkt poczatkowy \\
+\hline
+{\em fillcolor} & -\/ kolor wypelnienia \\
+\hline
+{\em boundry\+Color} & -\/ kolor obramowania \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_afdae8d86d78955a48e228e0fcfd8953b}\label{class_primitive_renderer_afdae8d86d78955a48e228e0fcfd8953b}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawBrokenLine@{drawBrokenLine}}
+\index{drawBrokenLine@{drawBrokenLine}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawBrokenLine()}{drawBrokenLine()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Broken\+Line (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point2_d}{Point2D}} $>$}]{vec,  }\item[{Color}]{color,  }\item[{bool}]{closed }\end{DoxyParamCaption})}
+
+
+
+draw\+Broken\+Line -\/ Metoda rysujaca otwarta lub zamknieta linie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & -\/ wektor punktow \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+{\em closed} & -\/ czy linia ma byc zamknieta czy otwarta \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_ad74e944fabe05bd86c234919c04f2618}\label{class_primitive_renderer_ad74e944fabe05bd86c234919c04f2618}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawCircle@{drawCircle}}
+\index{drawCircle@{drawCircle}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawCircle()}{drawCircle()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Circle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{float}]{radius,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Circle -\/ metoda rysujaca okrag 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ punkt poczatkowy \\
+\hline
+{\em radius} & -\/ promien \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_af9176b9411fd2a8dc387369146cf0cc1}\label{class_primitive_renderer_af9176b9411fd2a8dc387369146cf0cc1}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawCircleByAlgorithm@{drawCircleByAlgorithm}}
+\index{drawCircleByAlgorithm@{drawCircleByAlgorithm}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawCircleByAlgorithm()}{drawCircleByAlgorithm()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Circle\+By\+Algorithm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{float}]{radius,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Circle\+By\+Algorithm -\/ metoda rysujaca okrag algorytmem 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ punkt poczatkowy \\
+\hline
+{\em radius} & -\/ promien \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_aa1e4c4e5225be9cead679cb082bbe799}\label{class_primitive_renderer_aa1e4c4e5225be9cead679cb082bbe799}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawConvexShape@{drawConvexShape}}
+\index{drawConvexShape@{drawConvexShape}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawConvexShape()}{drawConvexShape()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Convex\+Shape (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point2_d}{Point2D}} $>$}]{vec,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Convex\+Shape -\/ metoda rysujaca wielokat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & -\/ wektor punktow wielokata \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_a9f9bd4342075da31b9fb1ab3ddcf6a01}\label{class_primitive_renderer_a9f9bd4342075da31b9fb1ab3ddcf6a01}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawElipseByAlgorithm@{drawElipseByAlgorithm}}
+\index{drawElipseByAlgorithm@{drawElipseByAlgorithm}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawElipseByAlgorithm()}{drawElipseByAlgorithm()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Elipse\+By\+Algorithm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{float}]{radiusX,  }\item[{float}]{radiusY,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Elipse\+By\+Algorithm -\/ metoda rysujaca elipse algorytmem 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ punkt poczatkowy \\
+\hline
+{\em radiusX} & -\/ promien X \\
+\hline
+{\em radiusY} & -\/ promien Y \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_a3710ebe98dc1206a604bc19c267732d4}\label{class_primitive_renderer_a3710ebe98dc1206a604bc19c267732d4}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawFilledCircle@{drawFilledCircle}}
+\index{drawFilledCircle@{drawFilledCircle}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawFilledCircle()}{drawFilledCircle()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Filled\+Circle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{float}]{radius,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Filled\+Circle -\/ metoda rysujaca wypelniony okrag 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ punkt poczatkowy \\
+\hline
+{\em radius} & -\/ promien \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_ac220550d5ff06e60565d9d49b1e97fd9}\label{class_primitive_renderer_ac220550d5ff06e60565d9d49b1e97fd9}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawFilledRectangle@{drawFilledRectangle}}
+\index{drawFilledRectangle@{drawFilledRectangle}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawFilledRectangle()}{drawFilledRectangle()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Filled\+Rectangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Filled\+Rectangle -\/ metoda rysujaca wypelniony prostokat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ punkt poczatkowy \\
+\hline
+{\em width} & -\/ szerokosc \\
+\hline
+{\em height} & -\/ wysokosc \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_a44c28dc4c8476a57a600a0cccb0f6612}\label{class_primitive_renderer_a44c28dc4c8476a57a600a0cccb0f6612}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawFilledSquare@{drawFilledSquare}}
+\index{drawFilledSquare@{drawFilledSquare}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawFilledSquare()}{drawFilledSquare()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Filled\+Square (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{int}]{x,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Filled\+Square -\/ metoda rysujaca wypelniony kwadrat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ punkt poczatkowy \\
+\hline
+{\em x} & -\/ dlugosc boku \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_a370b721906ea290065cdc9d636df2547}\label{class_primitive_renderer_a370b721906ea290065cdc9d636df2547}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawLine@{drawLine}}
+\index{drawLine@{drawLine}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point1,  }\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point2,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Line -\/ metoda rysujaca linie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point1} & -\/ punkt poczatkowy \\
+\hline
+{\em point2} & -\/ punkt koncowy \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_a0666eb7e399601fa6f5277ca2dcb3bcc}\label{class_primitive_renderer_a0666eb7e399601fa6f5277ca2dcb3bcc}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawLineByAlgorithm@{drawLineByAlgorithm}}
+\index{drawLineByAlgorithm@{drawLineByAlgorithm}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawLineByAlgorithm()}{drawLineByAlgorithm()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Line\+By\+Algorithm (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point1,  }\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point2,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Line\+By\+Algorithm -\/ metoda rysujaca linie algorytmem przyrostowym 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point1} & -\/ punkt poczatkowy \\
+\hline
+{\em point2} & -\/ punkt koncowy \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_aed948482a20a6ef679ece3069c7bf348}\label{class_primitive_renderer_aed948482a20a6ef679ece3069c7bf348}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawPoint@{drawPoint}}
+\index{drawPoint@{drawPoint}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawPoint()}{drawPoint()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Point -\/ metoda rysujaca punkt 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ punkt \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_a61c2871f385c4d3e3c72430cb0d5855b}\label{class_primitive_renderer_a61c2871f385c4d3e3c72430cb0d5855b}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawRectangle@{drawRectangle}}
+\index{drawRectangle@{drawRectangle}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawRectangle()}{drawRectangle()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Rectangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Rectangle -\/ metoda rysujaca prostokat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ punkt poczatkowy \\
+\hline
+{\em width} & -\/ szerokosc \\
+\hline
+{\em height} & -\/ wysokosc \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_a45047cf4e69f32beebd73392d1356f4b}\label{class_primitive_renderer_a45047cf4e69f32beebd73392d1356f4b}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!drawSquare@{drawSquare}}
+\index{drawSquare@{drawSquare}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{drawSquare()}{drawSquare()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::draw\+Square (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{int}]{x,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw\+Square -\/ metoda rysujaca kwadrat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ punkt poczatkowy \\
+\hline
+{\em x} & -\/ dlugosc boku \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_primitive_renderer_a4649c9a7232f9190172dd55da97800f7}\label{class_primitive_renderer_a4649c9a7232f9190172dd55da97800f7}} 
+\index{PrimitiveRenderer@{PrimitiveRenderer}!floodFill@{floodFill}}
+\index{floodFill@{floodFill}!PrimitiveRenderer@{PrimitiveRenderer}}
+\doxysubsubsection{\texorpdfstring{floodFill()}{floodFill()}}
+{\footnotesize\ttfamily void Primitive\+Renderer\+::flood\+Fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}} $\ast$}]{point,  }\item[{Color}]{color,  }\item[{Color}]{background\+Color }\end{DoxyParamCaption})}
+
+
+
+flood\+Fill -\/ algorytm wypelniania kolorem \char`\"{}flood\+Fill\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & punkt poczatkowy \\
+\hline
+{\em color} & -\/ kolor \\
+\hline
+{\em background\+Color} & -\/ kolor tla \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/piotr/source/repos/\+Silnik2\+D/\+Silnik2\+D/\mbox{\hyperlink{_primitive_renderer_8h}{Primitive\+Renderer.\+h}}\item 
+C\+:/\+Users/piotr/source/repos/\+Silnik2\+D/\+Silnik2\+D/Primitive\+Renderer.\+cpp\end{DoxyCompactItemize}

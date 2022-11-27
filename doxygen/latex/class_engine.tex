@@ -1,0 +1,324 @@
+\hypertarget{class_engine}{}\doxysection{Engine Class Reference}
+\label{class_engine}\index{Engine@{Engine}}
+
+
+Klasa reprezentujaca silnik graficzny 2D.  
+
+
+
+
+{\ttfamily \#include $<$Engine.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_adfbc021fedf1068f44ccf8814599be59}{Engine}} (Render\+Window $\ast$window)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_engine}{Engine}} -\/ Konstruktor klasy \mbox{\hyperlink{class_engine}{Engine}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a561ff0774d8a704e97f66b92a95f6729}{change\+Resolution}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em change\+Resolution -\/ meotda zmieniajaca rozdzielczosc \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a3ab7423f1914430f93e304974c701e02}{enable\+Fullscreen}} (bool fullscreen)
+\begin{DoxyCompactList}\small\item\em enable\+Fullscreen -\/ meotda przelaczajaca tryb wyswietlania \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_aeac62d4f7e90a55376aad249b56a3d68}\label{class_engine_aeac62d4f7e90a55376aad249b56a3d68}} 
+void {\bfseries close\+Game} ()
+\begin{DoxyCompactList}\small\item\em enable\+Fullscreen -\/ meotda zamykajaca gre \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a33be9227ce0489c244d9a46d046fe491}{clear\+Screen}} (Color color)
+\begin{DoxyCompactList}\small\item\em clear\+Screen -\/ meotda wypelniajaca ekran danym kolorem \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_ab266fc21869ee8757a900aae2cc8f881}\label{class_engine_ab266fc21869ee8757a900aae2cc8f881}} 
+void {\bfseries game\+Loop} ()
+\begin{DoxyCompactList}\small\item\em game\+Loop -\/ glowna petla gry \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a0dd05ccefa7838b8aeb298597d547d37}{keyboard\+Event\+Register}} (int key, void($\ast$function)(), bool hold)
+\begin{DoxyCompactList}\small\item\em keyboard\+Event\+Register -\/ metoda przypisujaca klawisz do funkcji \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a3354e8f1224e3b41abb0b6fe1fa3409b}{mouse\+Event\+Register}} (int key, void($\ast$function)(), bool hold)
+\begin{DoxyCompactList}\small\item\em mouse\+Event\+Register -\/ metoda przypisujaca przycisk myszy do funkcji \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a46d660524455c3560639f03ee58e232f}{handle\+Action\+Keyboard}} (Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em handle\+Action\+Keyboard -\/ Wywolanie przypisanej funkcji pod klawisz o ile takowa jest \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a8e0ac091e169a21d4d02c4cdb2f18a51}{handle\+Action\+Mouse}} (Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em handle\+Action\+Keyboard -\/ Wywolanie przypisanej funkcji pod przycisk myszy o ile takowa jest \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_ac7e400082559cb6f60ee0ec2af8e516a}{set\+FPSLimit}} (unsigned int value)
+\begin{DoxyCompactList}\small\item\em set\+FPSLimit -\/ Ustawia maksymalna wartosc FPS-\/ow \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a6fca86f9ef4c1be67a4c8768d2e3db90}{enable\+VSync}} (bool boolean)
+\begin{DoxyCompactList}\small\item\em enable\+Mouse -\/ Czy synchronizacja pionowa wlaczona, czy wylaczona \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_ae00f1a82225e1210418717e68bedaf8e}\label{class_engine_ae00f1a82225e1210418717e68bedaf8e}} 
+void {\bfseries update\+Timer} ()
+\begin{DoxyCompactList}\small\item\em update\+Timer -\/ Aktualizacja czasomierza \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_a90ebacd4ccd55be909a84e3cb74466ef}{enable\+Mouse}} (bool value)
+\begin{DoxyCompactList}\small\item\em enable\+Mouse -\/ Wlaczanie/wylaczanie myszki \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_adaf00e71c7a71df02cb534bad741fc3c}{enable\+Keyboard}} (bool value)
+\begin{DoxyCompactList}\small\item\em enable\+Keyboard -\/ Wlaczanie/wylaczenie klawiatury \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_aed1860c61fb62ccf3453dc7bf82a566f}{report\+Error}} (\mbox{\hyperlink{_engine_8h_a8fb872c72e116bbd3eba31f48d78e76b}{Errors}} error, string file\+Name, int line)
+\begin{DoxyCompactList}\small\item\em report\+Error -\/ metoda zglaszajacy blad \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_a4f25936416b9ae8b31818508621c33c8}\label{class_engine_a4f25936416b9ae8b31818508621c33c8}} 
+Render\+Window $\ast$ {\bfseries get\+Window} ()
+\begin{DoxyCompactList}\small\item\em get\+Window -\/ zwraca okno \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_engine}{Engine}} $\ast$ \mbox{\hyperlink{class_engine_a6b67842f54d321c6b8c262305505efdf}{get\+Instance}} (Render\+Window $\ast$window)
+\begin{DoxyCompactList}\small\item\em get\+Instance -\/ pobranie instancji okna \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_ae8f7319cf3683c23f6a215952d47ebdf}\label{class_engine_ae8f7319cf3683c23f6a215952d47ebdf}} 
+static \mbox{\hyperlink{class_engine}{Engine}} $\ast$ {\bfseries get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em get\+Instance -\/ pobranie instancji \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point2_d}{Point2D}} $>$ \mbox{\hyperlink{class_engine_a109634a23a6ee457afcc305f05509c0d}{point\+Vector}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_engine}{Engine}} $\ast$ \mbox{\hyperlink{class_engine_a51493b63c58390f775dd2bc6f72a2b75}{instance}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentujaca silnik graficzny 2D. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_engine_adfbc021fedf1068f44ccf8814599be59}\label{class_engine_adfbc021fedf1068f44ccf8814599be59}} 
+\index{Engine@{Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Engine()}{Engine()}}
+{\footnotesize\ttfamily Engine\+::\+Engine (\begin{DoxyParamCaption}\item[{Render\+Window $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_engine}{Engine}} -\/ Konstruktor klasy \mbox{\hyperlink{class_engine}{Engine}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & -\/ wskaznik na okno gry \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_engine_a561ff0774d8a704e97f66b92a95f6729}\label{class_engine_a561ff0774d8a704e97f66b92a95f6729}} 
+\index{Engine@{Engine}!changeResolution@{changeResolution}}
+\index{changeResolution@{changeResolution}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{changeResolution()}{changeResolution()}}
+{\footnotesize\ttfamily void Engine\+::change\+Resolution (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+change\+Resolution -\/ meotda zmieniajaca rozdzielczosc 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & -\/ szerokosc \\
+\hline
+{\em height} & -\/ wysokosc \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a33be9227ce0489c244d9a46d046fe491}\label{class_engine_a33be9227ce0489c244d9a46d046fe491}} 
+\index{Engine@{Engine}!clearScreen@{clearScreen}}
+\index{clearScreen@{clearScreen}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
+{\footnotesize\ttfamily void Engine\+::clear\+Screen (\begin{DoxyParamCaption}\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+clear\+Screen -\/ meotda wypelniajaca ekran danym kolorem 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a3ab7423f1914430f93e304974c701e02}\label{class_engine_a3ab7423f1914430f93e304974c701e02}} 
+\index{Engine@{Engine}!enableFullscreen@{enableFullscreen}}
+\index{enableFullscreen@{enableFullscreen}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{enableFullscreen()}{enableFullscreen()}}
+{\footnotesize\ttfamily void Engine\+::enable\+Fullscreen (\begin{DoxyParamCaption}\item[{bool}]{fullscreen }\end{DoxyParamCaption})}
+
+
+
+enable\+Fullscreen -\/ meotda przelaczajaca tryb wyswietlania 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fullscreen} & -\/ zmienna aktywujaca/wylaczajaca pelny ekran \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_adaf00e71c7a71df02cb534bad741fc3c}\label{class_engine_adaf00e71c7a71df02cb534bad741fc3c}} 
+\index{Engine@{Engine}!enableKeyboard@{enableKeyboard}}
+\index{enableKeyboard@{enableKeyboard}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{enableKeyboard()}{enableKeyboard()}}
+{\footnotesize\ttfamily void Engine\+::enable\+Keyboard (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+enable\+Keyboard -\/ Wlaczanie/wylaczenie klawiatury 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ Czy klawiatura wlaczona/czy wylaczona \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a90ebacd4ccd55be909a84e3cb74466ef}\label{class_engine_a90ebacd4ccd55be909a84e3cb74466ef}} 
+\index{Engine@{Engine}!enableMouse@{enableMouse}}
+\index{enableMouse@{enableMouse}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{enableMouse()}{enableMouse()}}
+{\footnotesize\ttfamily void Engine\+::enable\+Mouse (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+enable\+Mouse -\/ Wlaczanie/wylaczanie myszki 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ Czy mysz wlaczona/czy wylaczona \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a6fca86f9ef4c1be67a4c8768d2e3db90}\label{class_engine_a6fca86f9ef4c1be67a4c8768d2e3db90}} 
+\index{Engine@{Engine}!enableVSync@{enableVSync}}
+\index{enableVSync@{enableVSync}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{enableVSync()}{enableVSync()}}
+{\footnotesize\ttfamily void Engine\+::enable\+VSync (\begin{DoxyParamCaption}\item[{bool}]{boolean }\end{DoxyParamCaption})}
+
+
+
+enable\+Mouse -\/ Czy synchronizacja pionowa wlaczona, czy wylaczona 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ Czy wlaczona/czy wylaczona \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a6b67842f54d321c6b8c262305505efdf}\label{class_engine_a6b67842f54d321c6b8c262305505efdf}} 
+\index{Engine@{Engine}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_engine}{Engine}} $\ast$ Engine\+::get\+Instance (\begin{DoxyParamCaption}\item[{Render\+Window $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+get\+Instance -\/ pobranie instancji okna 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & -\/ okno gry \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a46d660524455c3560639f03ee58e232f}\label{class_engine_a46d660524455c3560639f03ee58e232f}} 
+\index{Engine@{Engine}!handleActionKeyboard@{handleActionKeyboard}}
+\index{handleActionKeyboard@{handleActionKeyboard}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{handleActionKeyboard()}{handleActionKeyboard()}}
+{\footnotesize\ttfamily void Engine\+::handle\+Action\+Keyboard (\begin{DoxyParamCaption}\item[{Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+handle\+Action\+Keyboard -\/ Wywolanie przypisanej funkcji pod klawisz o ile takowa jest 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ Wskaznik na zdarzenie \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a8e0ac091e169a21d4d02c4cdb2f18a51}\label{class_engine_a8e0ac091e169a21d4d02c4cdb2f18a51}} 
+\index{Engine@{Engine}!handleActionMouse@{handleActionMouse}}
+\index{handleActionMouse@{handleActionMouse}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{handleActionMouse()}{handleActionMouse()}}
+{\footnotesize\ttfamily void Engine\+::handle\+Action\+Mouse (\begin{DoxyParamCaption}\item[{Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+handle\+Action\+Keyboard -\/ Wywolanie przypisanej funkcji pod przycisk myszy o ile takowa jest 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & -\/ Wskaznik na zdarzenie \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a0dd05ccefa7838b8aeb298597d547d37}\label{class_engine_a0dd05ccefa7838b8aeb298597d547d37}} 
+\index{Engine@{Engine}!keyboardEventRegister@{keyboardEventRegister}}
+\index{keyboardEventRegister@{keyboardEventRegister}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{keyboardEventRegister()}{keyboardEventRegister()}}
+{\footnotesize\ttfamily void Engine\+::keyboard\+Event\+Register (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{void($\ast$)()}]{function,  }\item[{bool}]{hold }\end{DoxyParamCaption})}
+
+
+
+keyboard\+Event\+Register -\/ metoda przypisujaca klawisz do funkcji 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ przycisk na klawiaturze \\
+\hline
+{\em function} & -\/ wskaznik na funkcje \\
+\hline
+{\em hold} & -\/ true -\/ mozna trzymac przycisk do wywolania funkcji, false -\/ nie mozna \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_a3354e8f1224e3b41abb0b6fe1fa3409b}\label{class_engine_a3354e8f1224e3b41abb0b6fe1fa3409b}} 
+\index{Engine@{Engine}!mouseEventRegister@{mouseEventRegister}}
+\index{mouseEventRegister@{mouseEventRegister}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{mouseEventRegister()}{mouseEventRegister()}}
+{\footnotesize\ttfamily void Engine\+::mouse\+Event\+Register (\begin{DoxyParamCaption}\item[{int}]{key,  }\item[{void($\ast$)()}]{function,  }\item[{bool}]{hold }\end{DoxyParamCaption})}
+
+
+
+mouse\+Event\+Register -\/ metoda przypisujaca przycisk myszy do funkcji 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ przycisk na myszcze \\
+\hline
+{\em function} & -\/ wskaznik na funkcje \\
+\hline
+{\em hold} & -\/ true -\/ mozna trzymac przycisk do wywolania funkcji, false -\/ nie mozna \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_aed1860c61fb62ccf3453dc7bf82a566f}\label{class_engine_aed1860c61fb62ccf3453dc7bf82a566f}} 
+\index{Engine@{Engine}!reportError@{reportError}}
+\index{reportError@{reportError}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{reportError()}{reportError()}}
+{\footnotesize\ttfamily void Engine\+::report\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_engine_8h_a8fb872c72e116bbd3eba31f48d78e76b}{Errors}}}]{error,  }\item[{string}]{file\+Name,  }\item[{int}]{line }\end{DoxyParamCaption})}
+
+
+
+report\+Error -\/ metoda zglaszajacy blad 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & -\/ jaki blad \\
+\hline
+{\em file\+Name} & -\/ nazwa pliku w ktorym jest blad \\
+\hline
+{\em line} & -\/ linia bledu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_ac7e400082559cb6f60ee0ec2af8e516a}\label{class_engine_ac7e400082559cb6f60ee0ec2af8e516a}} 
+\index{Engine@{Engine}!setFPSLimit@{setFPSLimit}}
+\index{setFPSLimit@{setFPSLimit}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{setFPSLimit()}{setFPSLimit()}}
+{\footnotesize\ttfamily void Engine\+::set\+FPSLimit (\begin{DoxyParamCaption}\item[{unsigned int}]{value }\end{DoxyParamCaption})}
+
+
+
+set\+FPSLimit -\/ Ustawia maksymalna wartosc FPS-\/ow 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ Maksymalna ilosc FPS-\/ow \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_engine_a51493b63c58390f775dd2bc6f72a2b75}\label{class_engine_a51493b63c58390f775dd2bc6f72a2b75}} 
+\index{Engine@{Engine}!instance@{instance}}
+\index{instance@{instance}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_engine}{Engine}} $\ast$ Engine\+::instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Wskaznik na instancje klasy \mbox{\Hypertarget{class_engine_a109634a23a6ee457afcc305f05509c0d}\label{class_engine_a109634a23a6ee457afcc305f05509c0d}} 
+\index{Engine@{Engine}!pointVector@{pointVector}}
+\index{pointVector@{pointVector}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{pointVector}{pointVector}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_point2_d}{Point2D}}$>$ Engine\+::point\+Vector}
+
+Wektor punktow 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/piotr/source/repos/\+Silnik2\+D/\+Silnik2\+D/\mbox{\hyperlink{_engine_8h}{Engine.\+h}}\item 
+C\+:/\+Users/piotr/source/repos/\+Silnik2\+D/\+Silnik2\+D/Engine.\+cpp\end{DoxyCompactItemize}

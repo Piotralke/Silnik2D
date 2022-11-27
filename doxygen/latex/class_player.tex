@@ -1,0 +1,109 @@
+\hypertarget{class_player}{}\doxysection{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+Klasa gracza.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_player}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_acefb88a4d47eeecfcca4e9f618a3b568}{Player}} (std\+::vector$<$ Texture $>$ $\ast$\mbox{\hyperlink{class_animated_object_ac3cd0f9b0157f81dd898ae79f8b69a46}{textures}}, float \mbox{\hyperlink{class_animated_object_a2666f27c8f77b6bb4f6dfb5a6a49a9d7}{switch\+Time}}, Vector2f \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}, Vector2u \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_player}{Player}} -\/ Konstruktor klasy \mbox{\hyperlink{class_player}{Player}} z parametrami. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a22e389976ad3a4f76e153e0b1e3a59f4}{update}} (Vector2f move\+Vector)
+\begin{DoxyCompactList}\small\item\em update -\/ Funkcja aktualizujaca pozycje gracza \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ae1060fa362b047059a069c73fb6e8085}{draw}} (Render\+Window $\ast$window, float alfa)
+\begin{DoxyCompactList}\small\item\em draw -\/ Funkcja rysujaca pozycje gracza \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Convex\+Shape \mbox{\hyperlink{class_player_a61f0dd3761ecf4c2acf127285f578bbf}{cs}} = Convex\+Shape(this-\/$>$points.\+size())
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Klasa gracza. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_acefb88a4d47eeecfcca4e9f618a3b568}\label{class_player_acefb88a4d47eeecfcca4e9f618a3b568}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Texture $>$ $\ast$}]{textures,  }\item[{float}]{switch\+Time,  }\item[{Vector2f}]{position,  }\item[{Vector2u}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_player}{Player}} -\/ Konstruktor klasy \mbox{\hyperlink{class_player}{Player}} z parametrami. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em textures} & -\/ vector tekstur do animacji \\
+\hline
+{\em switch\+Time} & -\/ czas pomiedzy klatkami animacji \\
+\hline
+{\em position} & -\/ pozycja \\
+\hline
+{\em size} & -\/ rozmiar \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_ae1060fa362b047059a069c73fb6e8085}\label{class_player_ae1060fa362b047059a069c73fb6e8085}} 
+\index{Player@{Player}!draw@{draw}}
+\index{draw@{draw}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Player\+::draw (\begin{DoxyParamCaption}\item[{Render\+Window $\ast$}]{window,  }\item[{float}]{alfa }\end{DoxyParamCaption})}
+
+
+
+draw -\/ Funkcja rysujaca pozycje gracza 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & -\/ Wskaznik na okno gry \\
+\hline
+{\em alfa} & -\/ Kat pod jakim ma zostac obrocona bitmapa \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_a22e389976ad3a4f76e153e0b1e3a59f4}\label{class_player_a22e389976ad3a4f76e153e0b1e3a59f4}} 
+\index{Player@{Player}!update@{update}}
+\index{update@{update}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Player\+::update (\begin{DoxyParamCaption}\item[{Vector2f}]{move\+Vector }\end{DoxyParamCaption})}
+
+
+
+update -\/ Funkcja aktualizujaca pozycje gracza 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move\+Vector} & -\/ Wektor przemieszczenia \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_a61f0dd3761ecf4c2acf127285f578bbf}\label{class_player_a61f0dd3761ecf4c2acf127285f578bbf}} 
+\index{Player@{Player}!cs@{cs}}
+\index{cs@{cs}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{cs}{cs}}
+{\footnotesize\ttfamily Convex\+Shape Player\+::cs = Convex\+Shape(this-\/$>$points.\+size())}
+
+Obiekt do manipulacji graczem\texorpdfstring{$>$}{>} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/piotr/source/repos/\+Silnik2\+D/\+Silnik2\+D/\mbox{\hyperlink{_player_8h}{Player.\+h}}\item 
+C\+:/\+Users/piotr/source/repos/\+Silnik2\+D/\+Silnik2\+D/Player.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,42 @@
+\hypertarget{_primitive_renderer_8h_source}{}\doxysection{Primitive\+Renderer.\+h}
+\label{_primitive_renderer_8h_source}\index{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/PrimitiveRenderer.h@{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/PrimitiveRenderer.h}}
+\mbox{\hyperlink{_primitive_renderer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma warning(disable : 4996)}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define \_USE\_MATH\_DEFINES}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_point2_d_8h}{Point2D.h}}"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef primitiverenderer\_h}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define primitiverenderer\_h}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{using namespace }sf;}
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{class_primitive_renderer}{PrimitiveRenderer}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24     RenderWindow* window;}
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_primitive_renderer_ae0601810e6731fbc883ac424164d493f}{PrimitiveRenderer}}(RenderWindow* window);}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_aed948482a20a6ef679ece3069c7bf348}{drawPoint}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point, Color color);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_a61c2871f385c4d3e3c72430cb0d5855b}{drawRectangle}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point,\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height, Color color);}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_ac220550d5ff06e60565d9d49b1e97fd9}{drawFilledRectangle}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point,\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height, Color color);}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_a45047cf4e69f32beebd73392d1356f4b}{drawSquare}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point,\textcolor{keywordtype}{int} x, Color color);}
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_a44c28dc4c8476a57a600a0cccb0f6612}{drawFilledSquare}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point,\textcolor{keywordtype}{int} x, Color color);}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_a370b721906ea290065cdc9d636df2547}{drawLine}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point1, \mbox{\hyperlink{class_point2_d}{Point2D}}* point2, Color color);}
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_a0666eb7e399601fa6f5277ca2dcb3bcc}{drawLineByAlgorithm}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point1, \mbox{\hyperlink{class_point2_d}{Point2D}}* point2, Color color);}
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_aa1e4c4e5225be9cead679cb082bbe799}{drawConvexShape}}(std::vector<Point2D> vec, Color color);}
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_ad74e944fabe05bd86c234919c04f2618}{drawCircle}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point, \textcolor{keywordtype}{float} radius, Color color);}
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_a3710ebe98dc1206a604bc19c267732d4}{drawFilledCircle}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point, \textcolor{keywordtype}{float} radius, Color color);}
+\DoxyCodeLine{107     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_af9176b9411fd2a8dc387369146cf0cc1}{drawCircleByAlgorithm}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point, \textcolor{keywordtype}{float} radius, Color color);}
+\DoxyCodeLine{115     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_a9f9bd4342075da31b9fb1ab3ddcf6a01}{drawElipseByAlgorithm}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point, \textcolor{keywordtype}{float} radiusX, \textcolor{keywordtype}{float} radiusY, Color color);}
+\DoxyCodeLine{122     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_afdae8d86d78955a48e228e0fcfd8953b}{drawBrokenLine}}(std::vector<Point2D> vec, Color color, \textcolor{keywordtype}{bool} closed);}
+\DoxyCodeLine{129     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_a4649c9a7232f9190172dd55da97800f7}{floodFill}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point, Color color, Color backgroundColor);}
+\DoxyCodeLine{136     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_primitive_renderer_a3a44526e81d556db45e07e62f828b0e6}{boundryFill}}(\mbox{\hyperlink{class_point2_d}{Point2D}}* point, Color fillColor, Color boundryColor);}
+\DoxyCodeLine{137 \};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

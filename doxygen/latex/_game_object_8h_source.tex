@@ -1,0 +1,37 @@
+\hypertarget{_game_object_8h_source}{}\doxysection{Game\+Object.\+h}
+\label{_game_object_8h_source}\index{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/GameObject.h@{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/GameObject.h}}
+\mbox{\hyperlink{_game_object_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef gameobject\_h}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define gameobject\_h}}
+\DoxyCodeLine{9 \textcolor{keyword}{using namespace }sf;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_game_object}{GameObject}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{18     Vector2f \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}};}
+\DoxyCodeLine{19     Vector2u \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}};}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{GameObject}}() \{\}}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_game_object_a7b108a13ff6aec55a814f613ca38ae0b}{GameObject}}(Vector2f \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}, Vector2u \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}})}
+\DoxyCodeLine{31     \{}
+\DoxyCodeLine{32         this-\/>position = \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}};}
+\DoxyCodeLine{33         this-\/>size = \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}};}
+\DoxyCodeLine{34         \mbox{\hyperlink{class_game_object_a0f1afc4bf8306f142092617330cb014d}{points}}.push\_back(\mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}});}
+\DoxyCodeLine{35         \mbox{\hyperlink{class_game_object_a0f1afc4bf8306f142092617330cb014d}{points}}.push\_back(Vector2f(\mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}.x + \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}}.x, \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}.y));}
+\DoxyCodeLine{36         \mbox{\hyperlink{class_game_object_a0f1afc4bf8306f142092617330cb014d}{points}}.push\_back(Vector2f(\mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}.x + \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}}.x, \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}.y + \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}}.y));}
+\DoxyCodeLine{37         \mbox{\hyperlink{class_game_object_a0f1afc4bf8306f142092617330cb014d}{points}}.push\_back(Vector2f(\mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}.x, \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}.y + \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}}.y));}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39     std::vector<Vector2f> \mbox{\hyperlink{class_game_object_a0f1afc4bf8306f142092617330cb014d}{points}};}
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_a5829b670bde3351faf8c69e3d12df730}{setPosition}}(Vector2f\& \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}});}
+\DoxyCodeLine{48     \textcolor{keyword}{virtual} Vector2f \mbox{\hyperlink{class_game_object_ae9f92e643c07a7dd850f7b97cb358e18}{getPosition}}();}
+\DoxyCodeLine{53     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_object_a119a2f6a39ade5e9ba491e333ebce14b}{setSize}}(Vector2u \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}});}
+\DoxyCodeLine{57     \textcolor{keyword}{virtual} Vector2u \mbox{\hyperlink{class_game_object_ae58a463c968f484d561cdde2039cbedb}{getSize}}();}
+\DoxyCodeLine{58 \};}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// gameobject\_h}}
+\DoxyCodeLine{60 }
+
+\end{DoxyCode}

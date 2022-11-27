@@ -1,0 +1,73 @@
+\hypertarget{_engine_8h_source}{}\doxysection{Engine.\+h}
+\label{_engine_8h_source}\index{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/Engine.h@{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/Engine.h}}
+\mbox{\hyperlink{_engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_primitive_renderer_8h}{PrimitiveRenderer.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_line_segment_8h}{LineSegment.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_rectangle_object_8h}{RectangleObject.h}}"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <Windows.h>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_bitmap_handler_8h}{BitmapHandler.h}}"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef engine\_h}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define engine\_h}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{using namespace }sf;}
+\DoxyCodeLine{23 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{26 \textcolor{keyword}{enum} \mbox{\hyperlink{_engine_8h_a8fb872c72e116bbd3eba31f48d78e76b}{Errors}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \mbox{\hyperlink{_engine_8h_a8fb872c72e116bbd3eba31f48d78e76ba731ebd63324d73d156b8d7ba869a0cfc}{NO\_FILE\_ER}},}
+\DoxyCodeLine{29     \mbox{\hyperlink{_engine_8h_a8fb872c72e116bbd3eba31f48d78e76ba85a7b14ac7648a5d64893333c872b5ff}{UNKNOWN\_ER}} }
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{35 \textcolor{keyword}{class }\mbox{\hyperlink{class_engine}{Engine}}}
+\DoxyCodeLine{36 \{}
+\DoxyCodeLine{37 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{38     \textcolor{keyword}{static} \mbox{\hyperlink{class_engine}{Engine}}* \mbox{\hyperlink{class_engine_a51493b63c58390f775dd2bc6f72a2b75}{instance}};}
+\DoxyCodeLine{39 \textcolor{keyword}{public}:}
+\DoxyCodeLine{44     \mbox{\hyperlink{class_engine_adfbc021fedf1068f44ccf8814599be59}{Engine}}(RenderWindow* window);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a561ff0774d8a704e97f66b92a95f6729}{changeResolution}}(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a3ab7423f1914430f93e304974c701e02}{enableFullscreen}}(\textcolor{keywordtype}{bool} fullscreen);}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_aeac62d4f7e90a55376aad249b56a3d68}{closeGame}}();}
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a33be9227ce0489c244d9a46d046fe491}{clearScreen}}(Color color);}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_ab266fc21869ee8757a900aae2cc8f881}{gameLoop}}();}
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a0dd05ccefa7838b8aeb298597d547d37}{keyboardEventRegister}}(\textcolor{keywordtype}{int} key, \textcolor{keywordtype}{void} (*function)(), \textcolor{keywordtype}{bool} hold);}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a3354e8f1224e3b41abb0b6fe1fa3409b}{mouseEventRegister}}(\textcolor{keywordtype}{int} key, \textcolor{keywordtype}{void} (*function)(), \textcolor{keywordtype}{bool} hold);}
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a46d660524455c3560639f03ee58e232f}{handleActionKeyboard}}(Event* event);}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a8e0ac091e169a21d4d02c4cdb2f18a51}{handleActionMouse}}(Event* event);}
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_ac7e400082559cb6f60ee0ec2af8e516a}{setFPSLimit}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a6fca86f9ef4c1be67a4c8768d2e3db90}{enableVSync}}(\textcolor{keywordtype}{bool} \textcolor{keywordtype}{boolean});}
+\DoxyCodeLine{107     \textcolor{keyword}{static} \mbox{\hyperlink{class_engine}{Engine}}* \mbox{\hyperlink{class_engine_ae8f7319cf3683c23f6a215952d47ebdf}{getInstance}}(RenderWindow* window);}
+\DoxyCodeLine{111     \textcolor{keyword}{static} \mbox{\hyperlink{class_engine}{Engine}}* \mbox{\hyperlink{class_engine_ae8f7319cf3683c23f6a215952d47ebdf}{getInstance}}();}
+\DoxyCodeLine{115     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_ae00f1a82225e1210418717e68bedaf8e}{updateTimer}}();}
+\DoxyCodeLine{120     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a90ebacd4ccd55be909a84e3cb74466ef}{enableMouse}}(\textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{125     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_adaf00e71c7a71df02cb534bad741fc3c}{enableKeyboard}}(\textcolor{keywordtype}{bool} value);}
+\DoxyCodeLine{132     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_aed1860c61fb62ccf3453dc7bf82a566f}{reportError}}(\mbox{\hyperlink{_engine_8h_a8fb872c72e116bbd3eba31f48d78e76b}{Errors}} error, \textcolor{keywordtype}{string} fileName, \textcolor{keywordtype}{int} line);}
+\DoxyCodeLine{136     RenderWindow* \mbox{\hyperlink{class_engine_a4f25936416b9ae8b31818508621c33c8}{getWindow}}();}
+\DoxyCodeLine{137     std::vector<Point2D> \mbox{\hyperlink{class_engine_a109634a23a6ee457afcc305f05509c0d}{pointVector}};}
+\DoxyCodeLine{139 \textcolor{keyword}{private}:}
+\DoxyCodeLine{140     String Title = \textcolor{stringliteral}{"{}Silnik2D"{}}; }
+\DoxyCodeLine{141     RenderWindow* window; }
+\DoxyCodeLine{142     Time deltaTime; }
+\DoxyCodeLine{143     Clock clock; }
+\DoxyCodeLine{144     Event event; }
+\DoxyCodeLine{145     map<int, void(*)()> keyboardToFuncMap; }
+\DoxyCodeLine{146     map<int, void(*)()> mouseToFuncMap; }
+\DoxyCodeLine{147     map<Errors, std::string> errorDesc; }
+\DoxyCodeLine{148     set<int> holdableKeys; }
+\DoxyCodeLine{149     \textcolor{keywordtype}{bool} mouseOn = \textcolor{keyword}{true}; }
+\DoxyCodeLine{150     \textcolor{keywordtype}{bool} keyboardOn = \textcolor{keyword}{true}; }
+\DoxyCodeLine{151     \textcolor{keywordtype}{int} width; }
+\DoxyCodeLine{152     \textcolor{keywordtype}{int} height; }
+\DoxyCodeLine{153 \};}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

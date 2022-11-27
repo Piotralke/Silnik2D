@@ -1,0 +1,24 @@
+\hypertarget{_player_8h_source}{}\doxysection{Player.\+h}
+\label{_player_8h_source}\index{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/Player.h@{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/Player.h}}
+\mbox{\hyperlink{_player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef player\_h}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define player\_h}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_sprite_object_8h}{SpriteObject.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_player}{Player}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_sprite_object}{SpriteObject}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     ConvexShape \mbox{\hyperlink{class_player_a61f0dd3761ecf4c2acf127285f578bbf}{cs}} = ConvexShape(this-\/>\mbox{\hyperlink{class_game_object_a0f1afc4bf8306f142092617330cb014d}{points}}.size());}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_player_acefb88a4d47eeecfcca4e9f618a3b568}{Player}}(std::vector<Texture>* \mbox{\hyperlink{class_animated_object_ac3cd0f9b0157f81dd898ae79f8b69a46}{textures}}, \textcolor{keywordtype}{float} \mbox{\hyperlink{class_animated_object_a2666f27c8f77b6bb4f6dfb5a6a49a9d7}{switchTime}}, Vector2f \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}, Vector2u \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}})}
+\DoxyCodeLine{25         :\mbox{\hyperlink{class_sprite_object}{SpriteObject}}(\mbox{\hyperlink{class_animated_object_ac3cd0f9b0157f81dd898ae79f8b69a46}{textures}},\mbox{\hyperlink{class_animated_object_a2666f27c8f77b6bb4f6dfb5a6a49a9d7}{switchTime}},\mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}},\mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}}), \mbox{\hyperlink{class_game_object}{GameObject}}(\mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}},\mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}}), \mbox{\hyperlink{class_animated_object}{AnimatedObject}}(\mbox{\hyperlink{class_animated_object_ac3cd0f9b0157f81dd898ae79f8b69a46}{textures}},\mbox{\hyperlink{class_animated_object_a2666f27c8f77b6bb4f6dfb5a6a49a9d7}{switchTime}})}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         \textcolor{comment}{//cs.setOrigin(Vector2f((getSize().x / 2), (getSize().y / 2)));}}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a22e389976ad3a4f76e153e0b1e3a59f4}{update}}(Vector2f moveVector);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_drawable_object_af2c5d0c3a304690dfa3dda389c7ea7db}{draw}}(RenderWindow* window,\textcolor{keywordtype}{float} alfa);}
+\DoxyCodeLine{40 \};}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// !player\_h}}
+
+\end{DoxyCode}

@@ -1,0 +1,171 @@
+\hypertarget{class_line_segment}{}\doxysection{Line\+Segment Class Reference}
+\label{class_line_segment}\index{LineSegment@{LineSegment}}
+
+
+Klasa reprezentujaca linie.  
+
+
+
+
+{\ttfamily \#include $<$Line\+Segment.\+h$>$}
+
+Inheritance diagram for Line\+Segment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_line_segment}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_line_segment_a8d708983c193dbd75613603c21d6460b}{Line\+Segment}} (\mbox{\hyperlink{class_point2_d}{Point2D}} first, \mbox{\hyperlink{class_point2_d}{Point2D}} second)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_line_segment}{Line\+Segment}} -\/ Konstruktor z parametrami. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_line_segment_aecaf53f2f25771cf4f48a8055329cf78}\label{class_line_segment_aecaf53f2f25771cf4f48a8055329cf78}} 
+\mbox{\hyperlink{class_point2_d}{Point2D}} {\bfseries get\+First} ()
+\begin{DoxyCompactList}\small\item\em get\+First -\/ Zwraca wspolrzedne poczatku linii \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_line_segment_a6688205d8507716c5ca3a2e2ecad72eb}\label{class_line_segment_a6688205d8507716c5ca3a2e2ecad72eb}} 
+\mbox{\hyperlink{class_point2_d}{Point2D}} {\bfseries get\+Second} ()
+\begin{DoxyCompactList}\small\item\em get\+Second -\/ Zwraca wspolrzedne konca linii \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_segment_a5beba5e864f6ccf3d4fdf8bf3f2205b6}{set\+First}} (\mbox{\hyperlink{class_point2_d}{Point2D}} point)
+\begin{DoxyCompactList}\small\item\em set\+First -\/ Ustawia wspolrzedne poczatku linii \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_segment_a0e9e4f77a60c577e9636d156978ae1da}{set\+Second}} (\mbox{\hyperlink{class_point2_d}{Point2D}} point)
+\begin{DoxyCompactList}\small\item\em set\+Second -\/ Ustawia wspolrzedne konca linii \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_segment_aa9c2029ad512830b21971eeaae40cd09}{draw}} (int mode, \mbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} $\ast$pr, Color color)
+\begin{DoxyCompactList}\small\item\em draw -\/ Funkcja umozliwiajaca rysowanie linii \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_segment_a30462da2e7eef16c038347abde131efc}{translate}} (Vector2f vector)
+\begin{DoxyCompactList}\small\item\em translate -\/ Funkcja umozliwiajaca przesuwanie linii \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_segment_acc07501faed70a73de6a66a4a1e4ae09}{rotate}} (Vector2f \&point, float alfa)
+\begin{DoxyCompactList}\small\item\em rotate -\/ Funkcja umozliwiajaca obracanie linii \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_line_segment_a3e8529b744490460db4cd82a2531851b}{scale}} (Vector2f \&point, float k)
+\begin{DoxyCompactList}\small\item\em scale -\/ Funkcja umozliwiajaca skalowanie linii \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Klasa reprezentujaca linie. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_line_segment_a8d708983c193dbd75613603c21d6460b}\label{class_line_segment_a8d708983c193dbd75613603c21d6460b}} 
+\index{LineSegment@{LineSegment}!LineSegment@{LineSegment}}
+\index{LineSegment@{LineSegment}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{LineSegment()}{LineSegment()}}
+{\footnotesize\ttfamily Line\+Segment\+::\+Line\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}}}]{first,  }\item[{\mbox{\hyperlink{class_point2_d}{Point2D}}}]{second }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_line_segment}{Line\+Segment}} -\/ Konstruktor z parametrami. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & -\/ Wspolrzedne poczatku linii \\
+\hline
+{\em second} & -\/ Wspolrzedne konca linii \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_line_segment_aa9c2029ad512830b21971eeaae40cd09}\label{class_line_segment_aa9c2029ad512830b21971eeaae40cd09}} 
+\index{LineSegment@{LineSegment}!draw@{draw}}
+\index{draw@{draw}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Line\+Segment\+::draw (\begin{DoxyParamCaption}\item[{int}]{mode,  }\item[{\mbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} $\ast$}]{pr,  }\item[{Color}]{color }\end{DoxyParamCaption})}
+
+
+
+draw -\/ Funkcja umozliwiajaca rysowanie linii 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & -\/ Wybor algorytmu do rysowania linii \\
+\hline
+{\em pr} & -\/ Wskaznik na klase \mbox{\hyperlink{class_primitive_renderer}{Primitive\+Renderer}} \\
+\hline
+{\em color} & -\/ Kolor linii \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_line_segment_acc07501faed70a73de6a66a4a1e4ae09}\label{class_line_segment_acc07501faed70a73de6a66a4a1e4ae09}} 
+\index{LineSegment@{LineSegment}!rotate@{rotate}}
+\index{rotate@{rotate}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Line\+Segment\+::rotate (\begin{DoxyParamCaption}\item[{Vector2f \&}]{point,  }\item[{float}]{alfa }\end{DoxyParamCaption})}
+
+
+
+rotate -\/ Funkcja umozliwiajaca obracanie linii 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ Wspolrzedne punktu wobec ktorego ma wykonac obrot \\
+\hline
+{\em alfa} & -\/ Kat o jaki ma obrocic \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_line_segment_a3e8529b744490460db4cd82a2531851b}\label{class_line_segment_a3e8529b744490460db4cd82a2531851b}} 
+\index{LineSegment@{LineSegment}!scale@{scale}}
+\index{scale@{scale}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void Line\+Segment\+::scale (\begin{DoxyParamCaption}\item[{Vector2f \&}]{point,  }\item[{float}]{k }\end{DoxyParamCaption})}
+
+
+
+scale -\/ Funkcja umozliwiajaca skalowanie linii 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ Wspolrzedne punktu wobec ktorego ma wykonac skalowanie \\
+\hline
+{\em k} & -\/ Wspolczynnik skalowania \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_line_segment_a5beba5e864f6ccf3d4fdf8bf3f2205b6}\label{class_line_segment_a5beba5e864f6ccf3d4fdf8bf3f2205b6}} 
+\index{LineSegment@{LineSegment}!setFirst@{setFirst}}
+\index{setFirst@{setFirst}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{setFirst()}{setFirst()}}
+{\footnotesize\ttfamily void Line\+Segment\+::set\+First (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}}}]{point }\end{DoxyParamCaption})}
+
+
+
+set\+First -\/ Ustawia wspolrzedne poczatku linii 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ Nowe wspolrzedne poczatku linii \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_line_segment_a0e9e4f77a60c577e9636d156978ae1da}\label{class_line_segment_a0e9e4f77a60c577e9636d156978ae1da}} 
+\index{LineSegment@{LineSegment}!setSecond@{setSecond}}
+\index{setSecond@{setSecond}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{setSecond()}{setSecond()}}
+{\footnotesize\ttfamily void Line\+Segment\+::set\+Second (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point2_d}{Point2D}}}]{point }\end{DoxyParamCaption})}
+
+
+
+set\+Second -\/ Ustawia wspolrzedne konca linii 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & -\/ Nowe wspolrzedne konca linii \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_line_segment_a30462da2e7eef16c038347abde131efc}\label{class_line_segment_a30462da2e7eef16c038347abde131efc}} 
+\index{LineSegment@{LineSegment}!translate@{translate}}
+\index{translate@{translate}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Line\+Segment\+::translate (\begin{DoxyParamCaption}\item[{Vector2f}]{vector }\end{DoxyParamCaption})}
+
+
+
+translate -\/ Funkcja umozliwiajaca przesuwanie linii 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & -\/ Wektor przemieszczenia \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/piotr/source/repos/\+Silnik2\+D/\+Silnik2\+D/\mbox{\hyperlink{_line_segment_8h}{Line\+Segment.\+h}}\item 
+C\+:/\+Users/piotr/source/repos/\+Silnik2\+D/\+Silnik2\+D/Line\+Segment.\+cpp\end{DoxyCompactItemize}

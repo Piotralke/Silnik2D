@@ -1,0 +1,130 @@
+\hypertarget{class_game_object}{}\doxysection{Game\+Object Class Reference}
+\label{class_game_object}\index{GameObject@{GameObject}}
+
+
+Klasa podstawowego obiektu gry.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
+Inheritance diagram for Game\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.478261cm]{class_game_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}\label{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}} 
+{\bfseries Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_game_object}{Game\+Object}} -\/ Domyslny konstruktor klasy \mbox{\hyperlink{class_game_object}{Game\+Object}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game_object_a7b108a13ff6aec55a814f613ca38ae0b}{Game\+Object}} (Vector2f \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}, Vector2u \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_game_object}{Game\+Object}} -\/ Konstruktor klasy \mbox{\hyperlink{class_game_object}{Game\+Object}} z parametrami. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a5829b670bde3351faf8c69e3d12df730}{set\+Position}} (Vector2f \&\mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}})
+\begin{DoxyCompactList}\small\item\em set\+Position -\/ Ustawia pozycje \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_object_ae9f92e643c07a7dd850f7b97cb358e18}\label{class_game_object_ae9f92e643c07a7dd850f7b97cb358e18}} 
+virtual Vector2f {\bfseries get\+Position} ()
+\begin{DoxyCompactList}\small\item\em get\+Position -\/ Pobiera pozycje \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a119a2f6a39ade5e9ba491e333ebce14b}{set\+Size}} (Vector2u \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}})
+\begin{DoxyCompactList}\small\item\em set\+Size -\/ Ustawia rozmiar \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_object_ae58a463c968f484d561cdde2039cbedb}\label{class_game_object_ae58a463c968f484d561cdde2039cbedb}} 
+virtual Vector2u {\bfseries get\+Size} ()
+\begin{DoxyCompactList}\small\item\em get\+Size -\/ Pobiera rozmiar \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Vector2f $>$ \mbox{\hyperlink{class_game_object_a0f1afc4bf8306f142092617330cb014d}{points}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2f \mbox{\hyperlink{class_game_object_ad5624228068d0bb789213a4824bcfb26}{position}}
+\item 
+Vector2u \mbox{\hyperlink{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}{size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa podstawowego obiektu gry. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_object_a7b108a13ff6aec55a814f613ca38ae0b}\label{class_game_object_a7b108a13ff6aec55a814f613ca38ae0b}} 
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\index{GameObject@{GameObject}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GameObject()}{GameObject()}}
+{\footnotesize\ttfamily Game\+Object\+::\+Game\+Object (\begin{DoxyParamCaption}\item[{Vector2f}]{position,  }\item[{Vector2u}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}} -\/ Konstruktor klasy \mbox{\hyperlink{class_game_object}{Game\+Object}} z parametrami. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em postion} & -\/ Pozycja \\
+\hline
+{\em size} & -\/ Rozmiar \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_object_a5829b670bde3351faf8c69e3d12df730}\label{class_game_object_a5829b670bde3351faf8c69e3d12df730}} 
+\index{GameObject@{GameObject}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{Vector2f \&}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set\+Position -\/ Ustawia pozycje 
+
+
+\begin{DoxyParams}{Parameters}
+{\em postion} & -\/ Pozycja \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a119a2f6a39ade5e9ba491e333ebce14b}\label{class_game_object_a119a2f6a39ade5e9ba491e333ebce14b}} 
+\index{GameObject@{GameObject}!setSize@{setSize}}
+\index{setSize@{setSize}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Size (\begin{DoxyParamCaption}\item[{Vector2u}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+set\+Size -\/ Ustawia rozmiar 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & -\/ rozmiar \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_object_a0f1afc4bf8306f142092617330cb014d}\label{class_game_object_a0f1afc4bf8306f142092617330cb014d}} 
+\index{GameObject@{GameObject}!points@{points}}
+\index{points@{points}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily std\+::vector$<$Vector2f$>$ Game\+Object\+::points}
+
+Punkty rezprezentujace wierzcholki obiektu\texorpdfstring{$>$}{>} \mbox{\Hypertarget{class_game_object_ad5624228068d0bb789213a4824bcfb26}\label{class_game_object_ad5624228068d0bb789213a4824bcfb26}} 
+\index{GameObject@{GameObject}!position@{position}}
+\index{position@{position}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily Vector2f Game\+Object\+::position\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pozycja obiektu\texorpdfstring{$>$}{>} \mbox{\Hypertarget{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}\label{class_game_object_a0e57ac91d3d871d9af578a3f4129c4bc}} 
+\index{GameObject@{GameObject}!size@{size}}
+\index{size@{size}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily Vector2u Game\+Object\+::size\hspace{0.3cm}{\ttfamily [protected]}}
+
+Rozmiar obiektu\texorpdfstring{$>$}{>} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/piotr/source/repos/\+Silnik2\+D/\+Silnik2\+D/\mbox{\hyperlink{_game_object_8h}{Game\+Object.\+h}}\item 
+C\+:/\+Users/piotr/source/repos/\+Silnik2\+D/\+Silnik2\+D/Game\+Object.\+cpp\end{DoxyCompactItemize}

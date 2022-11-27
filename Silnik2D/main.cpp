@@ -4,7 +4,7 @@
 int main()
 {
     String title = "Silnik2D";
-    RenderWindow window(VideoMode(1280,720),"DUPA");
+    RenderWindow window(VideoMode::getDesktopMode(),"Demo");
     Engine* engine = Engine::getInstance(&window);
     
     //engine->changeResolution(1000, 1000);
