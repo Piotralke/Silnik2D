@@ -13,10 +13,18 @@
 class RectangleObject : public ShapeObject
 {
 public:
+
 	/**
 	 * @brief Konstruktor domyslny
 	 */
-    RectangleObject(){}
+	RectangleObject() {}
+	/**
+    * @brief Konstruktor z parametrami
+	* @param position - pozycja
+	* @param size - rozmiar
+    */
+    RectangleObject(Vector2f position, Vector2u size)
+	:GameObject(position, size){}
 	/**
 	* @brief draw - Metoda do rysowania
 	* @param window - Okno na ktorym rusujemy

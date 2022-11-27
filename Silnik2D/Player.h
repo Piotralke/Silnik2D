@@ -37,5 +37,6 @@ public:
 	* @param alfa - Kat pod jakim ma zostac obrocona bitmapa
 	**/
 	void draw(RenderWindow* window,float alfa);
+	void scale(float k);
 };
 #endif // !player_h

@@ -96,6 +96,20 @@ void prawo()
     moveVector.x = 5;
 
 }
+void scaleRectanlgeUp()
+{
+    Vector2f roPos(300, 200);
+    Engine* engine = Engine::getInstance();
+    engine->ro->scale(roPos,2);
+
+}
+void scaleRectanlgeDown()
+{
+    Vector2f roPos(300, 200);
+    Engine* engine = Engine::getInstance();
+    engine->ro->scale(roPos, 0.5);
+
+}
 void makeCircle()
 {
     Engine* engine = Engine::getInstance();
@@ -187,12 +201,13 @@ void Engine::gameLoop()
     Vector2f position(500, 500);
     Vector2u playersize(100, 100);
     Player player(&playerAnimation, 0.5,position, playersize);
-
     PrimitiveRenderer pr(window);
 	keyboardEventRegister(sf::Keyboard::W, &gora, true);
 	keyboardEventRegister(sf::Keyboard::A, &lewo, true);
 	keyboardEventRegister(sf::Keyboard::S, &dol, true);
 	keyboardEventRegister(sf::Keyboard::D, &prawo, true);
+	keyboardEventRegister(sf::Keyboard::Down, &scaleRectanlgeDown, true);
+	keyboardEventRegister(sf::Keyboard::Up, &scaleRectanlgeUp, true);
 	keyboardEventRegister(sf::Keyboard::F, &setFullscreen, false);
 	keyboardEventRegister(sf::Keyboard::G, &setWindowed, false);
     mouseEventRegister(sf::Mouse::Left, &makeCircle, false);
@@ -209,9 +224,17 @@ void Engine::gameLoop()
     Clock clock;
     float deltaTime;
     float mainRotation = 0;
+    Point2D tmp(player.cs.getOrigin().x, player.cs.getOrigin().y);
+    Vector2f v(tmp.getVector());
     BitmapObject background(Vector2f(0, 0), Vector2u(width,height), bitmapHandler.getTexture("background"));
+    Vector2f roPos(300, 200);
+    Vector2u roSize(20, 20);
+    RectangleObject r(roPos, roSize);
+    ro = &r;
+    ro->scale(roPos, 1.5);
     while (window->isOpen())
     {
+
         deltaTime = clock.restart().asSeconds();
         moveVector = Vector2f(0, 0);
         float alfa = 0;
@@ -253,6 +276,7 @@ void Engine::gameLoop()
         player.animate(deltaTime);
         window->clear();
         background.draw(window);
+        ro->draw(window, Color::Green);
         pr.drawFilledRectangle(&point, 100, 100, Color::Red);
         for (int i = 0; i < pointVector.size(); i++)
         {
@@ -274,6 +298,7 @@ void Engine::gameLoop()
         pr.drawElipseByAlgorithm(&point, 100,50 ,Color::Cyan);
         pr.drawBrokenLine(vector, Color::White,true);
         pr.drawLineByAlgorithm(&point, &point3, Color::Green);
+        
         //pr.floodFill(&pointFill, Color::Magenta, Color::Black);
         //pr.boundryFill(&pointFillBoundry, Color::Magenta, Color::White);;
         //window.draw(shape);

@@ -1,5 +1,5 @@
 \hypertarget{_engine_8h_source}{}\doxysection{Engine.\+h}
-\label{_engine_8h_source}\index{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/Engine.h@{C:/Users/piotr/source/repos/Silnik2D/Silnik2D/Engine.h}}
+\label{_engine_8h_source}\index{source/repos/Silnik2D/Silnik2D/Engine.h@{source/repos/Silnik2D/Silnik2D/Engine.h}}
 \mbox{\hyperlink{_engine_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 }
@@ -33,7 +33,7 @@
 \DoxyCodeLine{37 \textcolor{keyword}{protected}:}
 \DoxyCodeLine{38     \textcolor{keyword}{static} \mbox{\hyperlink{class_engine}{Engine}}* \mbox{\hyperlink{class_engine_a51493b63c58390f775dd2bc6f72a2b75}{instance}};}
 \DoxyCodeLine{39 \textcolor{keyword}{public}:}
-\DoxyCodeLine{44     \mbox{\hyperlink{class_engine_adfbc021fedf1068f44ccf8814599be59}{Engine}}(RenderWindow* window);}
+\DoxyCodeLine{44     \mbox{\hyperlink{class_engine}{Engine}}(RenderWindow* window);}
 \DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a561ff0774d8a704e97f66b92a95f6729}{changeResolution}}(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);}
 \DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_a3ab7423f1914430f93e304974c701e02}{enableFullscreen}}(\textcolor{keywordtype}{bool} fullscreen);}
 \DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_aeac62d4f7e90a55376aad249b56a3d68}{closeGame}}();}
@@ -53,21 +53,22 @@
 \DoxyCodeLine{132     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_engine_aed1860c61fb62ccf3453dc7bf82a566f}{reportError}}(\mbox{\hyperlink{_engine_8h_a8fb872c72e116bbd3eba31f48d78e76b}{Errors}} error, \textcolor{keywordtype}{string} fileName, \textcolor{keywordtype}{int} line);}
 \DoxyCodeLine{136     RenderWindow* \mbox{\hyperlink{class_engine_a4f25936416b9ae8b31818508621c33c8}{getWindow}}();}
 \DoxyCodeLine{137     std::vector<Point2D> \mbox{\hyperlink{class_engine_a109634a23a6ee457afcc305f05509c0d}{pointVector}};}
-\DoxyCodeLine{139 \textcolor{keyword}{private}:}
-\DoxyCodeLine{140     String Title = \textcolor{stringliteral}{"{}Silnik2D"{}}; }
-\DoxyCodeLine{141     RenderWindow* window; }
-\DoxyCodeLine{142     Time deltaTime; }
-\DoxyCodeLine{143     Clock clock; }
-\DoxyCodeLine{144     Event event; }
-\DoxyCodeLine{145     map<int, void(*)()> keyboardToFuncMap; }
-\DoxyCodeLine{146     map<int, void(*)()> mouseToFuncMap; }
-\DoxyCodeLine{147     map<Errors, std::string> errorDesc; }
-\DoxyCodeLine{148     set<int> holdableKeys; }
-\DoxyCodeLine{149     \textcolor{keywordtype}{bool} mouseOn = \textcolor{keyword}{true}; }
-\DoxyCodeLine{150     \textcolor{keywordtype}{bool} keyboardOn = \textcolor{keyword}{true}; }
-\DoxyCodeLine{151     \textcolor{keywordtype}{int} width; }
-\DoxyCodeLine{152     \textcolor{keywordtype}{int} height; }
-\DoxyCodeLine{153 \};}
-\DoxyCodeLine{154 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{138     \mbox{\hyperlink{class_rectangle_object}{RectangleObject}}* \mbox{\hyperlink{class_engine_a644f1cfd452755d14c83a3ff8c380843}{ro}};}
+\DoxyCodeLine{140 \textcolor{keyword}{private}:}
+\DoxyCodeLine{141     String Title = \textcolor{stringliteral}{"{}Silnik2D"{}}; }
+\DoxyCodeLine{142     RenderWindow* window; }
+\DoxyCodeLine{143     Time deltaTime; }
+\DoxyCodeLine{144     Clock clock; }
+\DoxyCodeLine{145     Event event; }
+\DoxyCodeLine{146     map<int, void(*)()> keyboardToFuncMap; }
+\DoxyCodeLine{147     map<int, void(*)()> mouseToFuncMap; }
+\DoxyCodeLine{148     map<Errors, std::string> errorDesc; }
+\DoxyCodeLine{149     set<int> holdableKeys; }
+\DoxyCodeLine{150     \textcolor{keywordtype}{bool} mouseOn = \textcolor{keyword}{true}; }
+\DoxyCodeLine{151     \textcolor{keywordtype}{bool} keyboardOn = \textcolor{keyword}{true}; }
+\DoxyCodeLine{152     \textcolor{keywordtype}{int} width; }
+\DoxyCodeLine{153     \textcolor{keywordtype}{int} height; }
+\DoxyCodeLine{154 \};}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

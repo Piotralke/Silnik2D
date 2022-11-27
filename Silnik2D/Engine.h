@@ -135,6 +135,7 @@ public:
 	**/
 	RenderWindow* getWindow();
 	std::vector<Point2D> pointVector;/*!<Wektor punktow*/
+	RectangleObject* ro;/*!<Prostokat*/
 	
 private:
 	String Title = "Silnik2D"; /*!<Tytul*/

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['texture_0',['texture',['../class_bitmap_object.html#a79d4dc67627e65db75441a80e69b58cb',1,'BitmapObject']]],
-  ['textures_1',['textures',['../class_animated_object.html#ac3cd0f9b0157f81dd898ae79f8b69a46',1,'AnimatedObject']]],
-  ['totaltime_2',['totalTime',['../class_animated_object.html#a9ab0f63e00958317fbe149e29d61727d',1,'AnimatedObject']]]
+  ['size_0',['size',['../class_game_object.html#a0e57ac91d3d871d9af578a3f4129c4bc',1,'GameObject']]],
+  ['switchtime_1',['switchTime',['../class_animated_object.html#a2666f27c8f77b6bb4f6dfb5a6a49a9d7',1,'AnimatedObject']]]
 ];
